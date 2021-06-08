@@ -72,38 +72,41 @@
                 </ul>
 
                 <button class="nav-hamburger">
-                    <i class="fas fa-bars"></i>
+                    <span class="nav-hamburger__bar"></span>
                 </button>
             </div>
         </nav>
 
         <main>
-            <section id="hero-section" class="hf-section">
-                <div class="hf-row">
-                    <div class="hf-column col-8">
+            <header id="hero-section">
+                <div class="hero-container">
+                    <div class="text-container">
+
                         <h1>
-                            Szabolcs Rónyai asd
-                            <!-- <span class="t-acc">.</span>is<span class="t-acc">()</span> -->
+                            szabi<span class="t-acc">.</span>is<span class="t-acc">()</span>
                         </h1>
-                        <h3>
+                        <span id="name" class="t-acc">
+                            Szabolcs Rónyai
+                        </span>
+                        <p class="hero-info">
                             Global Business Engineering Student
                             <br>
-                            from Hungary based in Denmark
+                            from Hungary, based in Denmark
                             <br>
                             <br>with a huge interest in
-                        </h3>
-                        <h3 class="typer">
-                            <p id="fe" class="f-program">Frontend Development</p>
-                            <p id="ux" class="f-design">User Experience and Design</p>
-                            <p id="gd" class="f-game">Game development</p>
-                        </h3>
+                        </p>
+                        <!-- <span id="ux" class="f-design" style="color: white;">User Experience and Design</span> -->
+                        <div id="TypeWriter"></div>
                     </div>
-                    <div class="hf-column col-4">
-                        <img src="src/assets/images/monke.jpg" alt="Profile Pic">
+                    <div class="img-container">
+                        <!-- <img src="src/assets/images/szabi.png" alt=""> -->
                     </div>
-                </div>
-            </section>
-            <!--
+            </header>
+
+
+
+            </div>
+
             <section class="hf-section">
                 <h2>About</h2>
                 Main skills
@@ -115,12 +118,15 @@
             <section class="hf-section">
                 <h2>Case Studies</h2>
                 <h3>Startup Central</h3>
-            </section> -->
+            </section>
         </main>
 
         <footer>
 
         </footer>
+
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script src="src/dist/js/main.js"></script>
     </body>
 
 </html>

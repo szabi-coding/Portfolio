@@ -118,7 +118,7 @@ textarea:focus {
 }
 
 .t-acc {
-  color: var(--clr-accent);
+  color: #ff006e;
 }
 
 .p-0 {
@@ -453,7 +453,7 @@ h6:last-child {
 
 p {
   font-weight: 400;
-  color: var(--text-color);
+  color: var(--clr-clearly-white);
   margin-bottom: 1em;
 }
 
@@ -483,6 +483,7 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
   height: 3rem;
+  position: fixed;
 }
 
 .main-nav__wrapper {
@@ -567,8 +568,43 @@ a {
 
 .main-nav .nav-hamburger {
   background: none;
-  border: 1px solid;
-  padding: 1rem;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 44px;
+  height: 44px;
+}
+
+.main-nav .nav-hamburger__bar {
+  background-color: var(--clr-clearly-white);
+  height: 3px;
+  width: 34px;
+  position: relative;
+}
+
+.main-nav .nav-hamburger__bar::before, .main-nav .nav-hamburger__bar::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 3px;
+  background-color: var(--clr-clearly-white);
+}
+
+.main-nav .nav-hamburger__bar::before {
+  top: -8px;
+  width: 42px;
+}
+
+.main-nav .nav-hamburger__bar::after {
+  bottom: -8px;
+  width: 26px;
 }
 
 @media screen and (min-width: 768px) {
@@ -792,35 +828,88 @@ a {
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#10002b), to(#240046));
-  background: linear-gradient(#10002b, #240046);
+  background: #03071e;
   background-repeat: no-repeat;
+}
+
+#hero-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 100vh;
+  width: 100%;
 }
 
-#hero-section h1,
-#hero-section h2 {
-  color: white;
+#hero-section .hero-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: auto;
 }
 
-#hero-section .typer {
-  color: white;
+#hero-section .hero-container img {
+  max-width: 250px;
 }
 
-#hero-section .typer #fe {
-  font-size: 24px;
+@media screen and (min-width: 768px) {
+  #hero-section .hero-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
-#hero-section .typer #ux {
-  font-size: 30px;
+#hero-section .hero-container h1 {
+  font-size: 48px;
+  margin: 0;
 }
 
-#hero-section .typer #gd {
-  font-size: 17px;
+#hero-section .hero-container #name {
+  font-size: 18px;
 }
 
-#hero-section .typer p {
-  color: inherit;
+#hero-section .hero-container .hero-info {
+  margin: 1rem 0;
+}
+
+#hero-section .hero-container #TypeWriter {
+  height: 45px;
+  color: var(--clr-clearly-white);
+}
+
+#hero-section .hero-container #fe {
+  font-size: 26px;
+}
+
+#hero-section .hero-container #ux {
+  font-size: 32px;
+}
+
+#hero-section .hero-container #gd {
+  font-size: 19px;
+}
+
+#hero-section .hero-container .Typewriter__cursor {
+  margin-left: 2px;
+  height: 50px;
+}
+
+#hero-section .img-container {
+  margin-top: 1.5rem;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

@@ -96,7 +96,8 @@ h6:last-child {
 
 p {
     font-weight: 400;
-    color: var(--text-color);
+    // color: var(--text-color);
+    color: var(--clr-clearly-white);
 
     &:last-child {
         margin-bottom: 0 !important;
