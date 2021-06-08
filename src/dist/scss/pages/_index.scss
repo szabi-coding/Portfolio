@@ -1,0 +1,35 @@
+body {
+    background: linear-gradient(#10002b, #240046);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+#hero-section {
+    // background-color: purple;
+
+    h1,
+    h2 {
+        color: white;
+    }
+
+    .typer {
+        // font-size: 2rem;
+        color: white;
+
+        #fe {
+            font-size: 24px;
+        }
+
+        #ux {
+            font-size: 30px;
+        }
+
+        #gd {
+            font-size: 17px;
+        }
+
+        p {
+            color: inherit;
+        }
+    }
+}

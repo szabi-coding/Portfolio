@@ -1,0 +1,110 @@
+/* Basic Grid System */
+/* ========================================================================== */
+.hf-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    padding-top: var(--section-spacing);
+    padding-bottom: var(--section-spacing);
+    padding-left: var(--page-gutter);
+    padding-right: var(--page-gutter);
+}
+
+.hf-row {
+    display: grid;
+    grid-template-columns: repeat(var(--num-grid-columns), 1fr);
+    grid-gap: var(--sc-content-gap);
+
+    width: 100%;
+    max-width: var(--page-max-width);
+
+    margin: auto;
+    // padding: 0 2.5rem;
+    // padding: 0 var(--page-gutter);
+
+    // @include mq(medium) {
+    // grid-template-columns: repeat(8, 1fr);
+    // grid-template-columns: repeat(var(--num-grid-columns), 1fr);
+    // }
+
+    // @include mq(large) {
+    // grid-template-columns: repeat(12, 1fr);
+    // grid-template-columns: repeat(var(--num-grid-columns), 1fr);
+    // }
+}
+
+.hf-column {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    width: 100%;
+    grid-column: span 4;
+
+    &.col-1 {
+        grid-column: span 1;
+    }
+
+    &.col-2 {
+        grid-column: span 2;
+    }
+
+    &.col-3 {
+        grid-column: span 2;
+    }
+
+    &.col-6 {
+        justify-content: center;
+    }
+
+    @for $i from 4 through 12 {
+        &.col-#{$i} {
+            grid-column: span 4;
+        }
+    }
+
+    @include mq(medium) {
+        grid-column: span 8;
+
+        @for $i from 3 through 6 {
+            &.col-#{$i} {
+                grid-column: span 4;
+            }
+        }
+
+        @for $i from 7 through 12 {
+            &.col-#{$i} {
+                grid-column: span 8;
+            }
+        }
+
+        &.col-4-fix {
+            grid-column: 3/span 4;
+        }
+    }
+
+    @include mq(large) {
+        grid-column: span 12;
+
+        @for $i from 1 through 12 {
+            &.col-#{$i} {
+                grid-column: span $i;
+            }
+        }
+    }
+
+    &.col-12 {
+        max-width: 800px;
+        margin: auto;
+
+        &>.inline-elements {
+            justify-content: center;
+        }
+    }
+
+    .col-4-fix {
+        grid-column: unset;
+    }
+}

@@ -1,0 +1,118 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    // line-height: 1.15;
+}
+
+body {
+    scroll-padding: 4rem 0 0 0;
+    // background-color: var(--clr-gray0);
+    // background-color: var(--clr-gray1);
+    background-color: var(--background);
+    color: vat(--text-color);
+}
+
+img {
+    display: block;
+    visibility: visible;
+    width: 100%;
+    border-radius: 8px;
+    opacity: 1;
+    // @include transition;
+}
+
+select {
+    display: block;
+    border: 1px solid var(--label-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--label-color);
+    line-height: 1.4;
+    background-color: var(--input-color);
+    outline: none;
+
+    &:focus-visible {
+        border: 2px solid var(--clr-accent);
+    }
+}
+
+textarea {
+    margin-top: .25rem;
+    max-width: 100%;
+    width: 100%;
+    height: 128px;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    padding: 12px;
+    font-size: 1rem;
+    resize: vertical;
+    border-radius: 8px;
+    outline: none;
+    // @include transition;
+
+    &:focus {
+        border: 2px solid var(--clr-accent);
+    }
+}
+
+// details {
+//     summary {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         align-items: center;
+//         list-style: none;
+
+//         &::-webkit-details-marker {
+//             display: none;
+//         }
+//     }
+
+//     &[open]>summary {
+
+//         svg {
+//             // background-color: #ccf;
+//             // @include transition;
+
+//             @keyframes rotate-center {
+//                 0% {
+//                     -webkit-transform: rotate(0);
+//                     transform: rotate(0);
+//                 }
+
+//                 100% {
+//                     -webkit-transform: rotate(180deg);
+//                     transform: rotate(180deg);
+//                 }
+//             }
+
+//             // transition: 0.2s linear;
+//             // animation: rotate-center 0.2s ease-in-out both;
+//             transform: rotate(180deg);
+//         }
+//     }
+// }

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Comic+Neue|Montserrat|Open+Sans|Oswald|Playfair+Display|Poppins|Raleway|Roboto&display=swap');
+@import url("https://use.typekit.net/miq0udh.css");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro&family=Yellowtail&display=swap');
+//Fonts
+$font-primary:'sofia-pro',
+sans-serif;
+$font-secondary:'Poppins',
+sans-serif;
+
+$font-program:'Source Code Pro',
+monospace;
+
+$font-design: 'Yellowtail',
+cursive;
+
+$font-game: 'Press Start 2P',
+cursive;
+
+body {
+    font-family: $font-primary;
+    color: var(--text-color);
+    line-height: 1.25;
+}
+
+.f-program {
+    font-family: $font-program;
+}
+
+.f-design {
+    font-family: $font-design;
+}
+
+.f-game {
+    font-family: $font-game;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    font-family: $font-secondary;
+    color: white;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.5em;
+    line-height: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
+h3 {
+    font-size: 1.5em;
+
+    @include mq(large) {
+        font-size: 2em;
+    }
+}
+
+h4 {
+    font-size: 1.25em;
+
+    @include mq(large) {
+        font-size: 1.5rem;
+    }
+}
+
+h5 {
+    font-size: 1.125rem;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+    margin-bottom: 0
+}
+
+p {
+    font-weight: 400;
+    color: var(--text-color);
+
+    &:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    margin-bottom: 1em;
+}
+
+ul li,
+ol li {
+    list-style-type: none;
+}
