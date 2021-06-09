@@ -1015,6 +1015,12 @@ a {
   text-decoration: none;
 }
 
+a.link {
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--clr-accent);
+          text-decoration-color: var(--clr-accent);
+}
+
 .main-nav {
   width: 100%;
   background-color: none;
