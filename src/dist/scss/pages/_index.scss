@@ -1,79 +1,198 @@
 body {
-    // background: linear-gradient(#10002b, #240046);
-    background: #03071e;
-    background-repeat: no-repeat;
-    // min-height: 100vh;
+    background-color: var(--clr-primary-dbg);
+    min-height: 100vh;
 }
 
-#hero-section {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
+#szabi-portfolio {
+    h2 {
+        font-size: 32px;
+    }
 
-    // max-width: var(--page-max-width);
+    .hf-row {
+        max-width: 800px;
 
-
-    .hero-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        // border: 2px solid red;
-        padding: 1rem;
-        width: 100%;
-        max-width: var(--page-max-width);
-        margin: auto;
-
-        img {
-            max-width: 250px;
-        }
-
-        @include mq(medium) {
-            flex-direction: row;
-            align-items: center;
-            // justify-content: space-between;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin: 0;
-        }
-
-        #name {
-            font-size: 18px;
-        }
-
-        .hero-info {
-            margin: 1rem 0;
-        }
-
-        #TypeWriter {
-            height: 45px;
-            color: var(--clr-clearly-white);
-        }
-
-        // span {
-        //     color: var(--clr-clearly-white);
-        // }
-
-        #fe {
-            font-size: 26px;
-        }
-
-        #ux {
-            font-size: 32px;
-        }
-
-        #gd {
-            font-size: 19px;
-        }
-
-        .Typewriter__cursor {
-            margin-left: 2px;
-            height: 50px;
+        .hf-column {
+            // align-items: center;
         }
     }
 
-    .img-container {
-        margin-top: 1.5rem;
+    #hero {
+        padding-top: 10rem;
+        min-height: 100vh;
+
+        h1 {
+            font-size: 62px;
+            margin-bottom: 0;
+        }
+
+        #name {
+            font-size: 22px;
+        }
+
+        .hero-info {
+            margin-top: 1rem;
+            font-size: 18px;
+            color: var(--clr-gray-2);
+        }
+
+        .hero-image {
+            position: absolute;
+            max-width: 250px;
+            z-index: -1;
+            top: 50%;
+            opacity: 0;
+        }
+
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // border: 2px solid red;
+            padding: 10rem 1rem 0;
+            width: 100%;
+            max-width: var(--page-max-width);
+            margin: auto;
+
+
+
+            @include mq(medium) {
+                flex-direction: row;
+                align-items: center;
+                // justify-content: space-between;
+            }
+
+            h1 {
+                font-size: 48px;
+                margin: 0;
+                font-family: $font-program;
+            }
+
+            #name {
+                font-size: 18px;
+            }
+
+            .hero-info {
+                margin: 1rem 0;
+            }
+
+            #TypeWriter {
+                height: 45px;
+                color: var(--clr-clearly-white);
+            }
+
+            // span {
+            //     color: var(--clr-clearly-white);
+            // }
+
+            #fe {
+                font-size: 26px;
+            }
+
+            #ux {
+                font-size: 32px;
+            }
+
+            #gd {
+                font-size: 19px;
+            }
+
+            .Typewriter__cursor {
+                margin-left: 2px;
+                height: 50px;
+            }
+
+            .textpath-img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                position: absolute;
+                right: 10%;
+                top: 25%;
+            }
+
+            .textpath-section {
+                width: 100%;
+                // height: 100vh;
+                position: relative;
+                display: grid;
+                place-items: center;
+                z-index: 2;
+            }
+
+            textPath {
+                color: white;
+            }
+
+            .animate {
+                animation: reveal 1s forwards;
+            }
+
+            svg {
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                // z-index: -1;
+            }
+        }
+    }
+
+    #about {
+
+
+        #design-logo {
+            max-width: 100%;
+            // margin-top: -2rem;
+
+            path:nth-of-type(1) {
+                stroke-dasharray: 494.2326354980469;
+                stroke-dashoffset: 494.2326354980469;
+                animation: line-anim 2s ease forwards;
+            }
+
+            path:nth-of-type(2) {
+                stroke-dasharray: 493.9271240234375;
+                stroke-dashoffset: 493.9271240234375;
+                animation: line-anim 2s ease forwards;
+            }
+
+            path:nth-of-type(3) {
+                stroke-dasharray: 542.6758422851562;
+                stroke-dashoffset: 542.6758422851562;
+                animation: line-anim 2s ease forwards;
+            }
+
+            path:nth-of-type(4) {
+                stroke-dasharray: 525.2319946289062;
+                stroke-dashoffset: 525.2319946289062;
+                animation: line-anim 2s ease forwards;
+            }
+
+            path:nth-of-type(5) {
+                stroke-dasharray: 533.4022216796875;
+                stroke-dashoffset: 533.4022216796875;
+                animation: line-anim 2s ease forwards;
+            }
+
+            path:nth-of-type(6) {
+                stroke-dasharray: 226.94400024414062;
+                stroke-dashoffset: 226.94400024414062;
+                animation: line-anim 2s ease forwards;
+            }
+
+            path:nth-of-type(7) {
+                stroke-dasharray: 635.7132568359375;
+                stroke-dashoffset: 635.7132568359375;
+                animation: line-anim 2s ease forwards;
+            }
+
+            path:nth-of-type(8) {
+                stroke-dasharray: 604.48291015625;
+                stroke-dashoffset: 604.48291015625;
+                animation: line-anim 2s ease forwards;
+            }
+        }
+
+
     }
 }

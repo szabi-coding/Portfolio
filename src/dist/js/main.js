@@ -1,84 +1,61 @@
-// // ES6 Class
-// class TypeWriter {
-//     constructor(txtElement, words, wait = 3000) {
-//         this.txtElement = txtElement;
-//         this.words = words;
-//         this.txt = '';
-//         this.wordIndex = 0;
-//         this.wait = parseInt(wait, 10);
-//         this.type();
-//         this.isDeleting = false;
-//     }
+// Navmenu show Y hidden
+const burgerTransform = document.getElementById('nav-toggle')
+const navShow = document.getElementById('nav-menu')
+const navLink = document.getElementsByClassName('.nav-button__link')
 
-//     type() {
-//         // Current index of word
-//         const current = this.wordIndex % this.words.length;
-//         // Get full text of current word
-//         const fullTxt = this.words[current];
+// burgerTransform.addEventListener("click", () => {
+//     burgerTransform.classList.toggle("is-clicked");
+//     navShow.classList.toggle("is-active");
+// });
 
-//         // Check if deleting
-//         if (this.isDeleting) {
-//             // Remove char
-//             this.txt = fullTxt.substring(0, this.txt.length - 1);
-//         } else {
-//             // Add char
-//             this.txt = fullTxt.substring(0, this.txt.length + 1);
-//         }
-
-//         // Insert txt into element
-//         this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-//         // Initial Type Speed
-//         let typeSpeed = 300;
-
-//         if (this.isDeleting) {
-//             typeSpeed /= 2;
-//         }
-
-//         // If word is complete
-//         if (!this.isDeleting && this.txt === fullTxt) {
-//             // Make pause at end
-//             typeSpeed = this.wait;
-//             // Set delete to true
-//             this.isDeleting = true;
-//         } else if (this.isDeleting && this.txt === '') {
-//             this.isDeleting = false;
-//             // Move to next word
-//             this.wordIndex++;
-//             // Pause before start typing
-//             typeSpeed = 500;
-//         }
-
-//         setTimeout(() => this.type(), typeSpeed);
-//     }
-// }
-
-
-// // Init On DOM Load
-// document.addEventListener('DOMContentLoaded', init);
-
-// // Init App
-// function init() {
-//     const txtElement = document.querySelector('.txt-type');
-//     const words = JSON.parse(txtElement.getAttribute('data-words'));
-//     const wait = txtElement.getAttribute('data-wait');
-//     // Init TypeWriter
-//     new TypeWriter(txtElement, words, wait);
-// }
-
-
-var app = document.getElementById('TypeWriter');
-
-var typewriter = new Typewriter(app, {
-    loop: true
+var twReact = document.getElementById('twReact')
+var typewriter = new Typewriter(twReact, {
+    delay: 25,
 });
 
-typewriter.typeString('<span id="fe" class="f-program">Frontend Development</span>')
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString('<span id="ux" class="f-design">User Experience and Design</span>')
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString('<span id="gd" class="f-game">Game development</span>')
-    .pauseFor(2500)
+typewriter.typeString(`<span class="t-prog5">class</span> <span class="t-prog3">HelloMessage</span> <span class="t-prog5">extends</span> <span class="t-prog3">React</span><span class="t-prog2">.</span><span class="t-prog3">Component</span> <span class="t-prog2">{</span><br>`)
+    .typeString(`<span class="js-type-letters"><span class="t-prog4" style="margin-left: 1rem;">render</span><span class="t-prog2">() {</span></span><br>`)
+    .typeString(`<span class="js-type-letters"><span class="t-prog5" style="margin-left: 2rem;">return</span> <span class="t-prog2">(</span></span><br>`)
+    .typeString(`<span class="t-prog1 less great" style="margin-left: 3rem;">div</span><br>`)
+    .typeString(`<span style="margin-left: 4rem;">Hello</span> <span class="t-prog2">{</span><span class="t-prog5">this</span><span class="t-prog2">.</span><span>props</span><span class="t-prog2">.</span><span>name</span><span class="t-prog2">}</span><br>`)
+    .typeString(`<span class="t-prog2 less" style="margin-left: 3rem;">/</span><span class="t-prog1 great">div</span><br>`)
+    .typeString(`<span class="t-prog2" style="margin-left: 2rem;">);</span><br><span class="t-prog2" style="margin-left: 1rem;">}</span><br><span class="t-prog2">}</span><br><br>`)
+    .typeString(`<span>ReactDOM</span><span class="t-prog2">.</span><span class="t-prog4">render</span><span class="t-prog2">(</span><br>`)
+    .typeString(`<span class="t-prog1 less" style="margin-left: 1rem;">HelloMessage</span> <span class="t-prog5 equal">name</span><span class="t-prog2">"</span><span>World</span><span class="t-prog2 great">"/</span><br>`)
+    .typeString(`<span style="margin-left: 1rem;">document</span><span class="t-prog1">.</span><span class="t-prog4">getElementById</span><span class="t-prog2">('hello-world')<br>);</span>`)
     .start();
+
+
+
+// //Moving Text in hero section
+// var textPath = document.querySelector('#text-path');
+
+// function updateTextPathOffset(offset) {
+//     textPath.setAttribute('startOffset', offset)
+// }
+
+// function onScroll() {
+//     requestAnimationFrame(function () {
+//         updateTextPathOffset(window.scrollY * .5)
+//     })
+// }
+
+
+
+// window.addEventListener('scroll', onScroll);
+// const titles = document.querySelectorAll('.anim');
+// observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting == true) {
+//             entry.target.classList.add('animate');
+//         } else {
+//             entry.target.classList.remove('animate');
+//         }
+//     })
+// })
+
+
+const logo = document.querySelectorAll("#design-logo path");
+for (let i = 0; i < logo.length; i++) {
+    console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
+}

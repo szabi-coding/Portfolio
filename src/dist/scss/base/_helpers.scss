@@ -42,10 +42,46 @@
 }
 
 .t-acc {
-    // color: var(--clr-accent);
-    // color: #f72585;
-    color: #ff006e;
+    color: var(--clr-accent);
 }
+
+.t-prog1 {
+    // color: #264653;
+    color: #ef476f;
+}
+
+.t-prog2 {
+    color: #06d6a0;
+}
+
+.t-prog3 {
+    color: #ffc857;
+}
+
+.t-prog4 {
+    color: #00b4d8;
+}
+
+.t-prog5 {
+    color: #e05780;
+}
+
+
+.less::before {
+    color: #06d6a0;
+    content: '<';
+}
+
+.great::after {
+    color: #06d6a0;
+    content: '>';
+}
+
+.equal::after {
+    color: #06d6a0;
+    content: '=';
+}
+
 
 @for $i from 0 through 16 {
     .p-#{$i*0.5} {
@@ -77,4 +113,12 @@
 
 .ml-2 {
     margin-left: 0.5rem;
+}
+
+.ml-3 {
+    margin-left: 0.75rem;
+}
+
+.ml-4 {
+    margin-left: 1rem;
 }

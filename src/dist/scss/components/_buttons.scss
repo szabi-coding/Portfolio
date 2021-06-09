@@ -1,0 +1,51 @@
+button,
+.btn,
+// input[type="button"]
+input[type="submit"],
+input[type="reset"] {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    color: var(--clr-text);
+    font-family: $font-secondary;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    @include transition;
+    line-height: 1.5;
+
+    &:focus {
+        outline: none !important;
+        // outline: 2px solid var(--clr-very-black);
+    }
+
+    span {
+        display: inline-block;
+    }
+}
+
+.btn {
+    background: var(--button-color);
+    background: #3a0ca3;
+    color: var(--clr-clearly-white);
+    padding: 0.25rem 0.875rem;
+    width: fit-content;
+    @include transition;
+
+    &:active,
+    &:hover {
+        // background-color: var(--clr-primary-dark);
+        background: var(--button-hover);
+    }
+
+    &:focus {
+        // border: 1px solid red;
+    }
+}

@@ -33,27 +33,4 @@
             --clr-#{$color}#{$shade}: #{$value};
         }
     }
-
-
-    --txt-xs: 0.75em;
-    --txt-sm: 0.875em;
-    --txt-nm: 1em;
-    --txt-lg: 1.125em;
-    --txt-xl: 1.25em;
-    --border-radius: 8px;
-
-
-    --background: var(--clr-primary-bg);
-    --h-color: var(--clr-primary);
-    --text-color: var(--clr-text);
-
-    --input-color: var(--clr-gray-1);
-    --label-color: var(--clr-gray-3);
-
-    --button-color: var(--clr-primary);
-    --button-hover: var(--clr-primary-light);
-
-    --card-bg: var(--clr-clearly-white);
-    --card-shadow: 0 4px 8px rgba(0, 30, 84, 0.12);
-    --card-border: var(--clr-gray-1)
 }

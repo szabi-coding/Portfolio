@@ -1,0 +1,18 @@
+.terminal {
+    font-family: $font-program;
+    background-color: rgb(32, 35, 42);
+    font-size: 14px;
+    padding: 1.25rem;
+    min-height: 325px;
+    max-width: 465px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .38);
+    background-color: var(--clr-primary-dark);
+    border: var(--clr-gray-6);
+    font-weight: 700;
+    user-select: none;
+
+    @include mq(medium) {
+        font-size: 1rem;
+    }
+}

@@ -18,7 +18,8 @@ cursive;
 
 body {
     font-family: $font-primary;
-    color: var(--text-color);
+    // color: var(--text-color);
+    color: var(--clr-clearly-white);
     line-height: 1.25;
 }
 
