@@ -191,6 +191,45 @@
                 </div>
             </section>
 
+            <section id="contact" class="section">
+                <div id="contact-form" class="row">
+                    <div class="column">
+                        <!-- <h4 class="less great">contact</h4> -->
+                        <p>Send an email to <a class="mymail" href="#">szronyai@gmail.com</a></p>
+                        <!-- <h4 class="less great"><span class="t-prog2">/</span>contact</h4> -->
+                        <p>Alternatively, you can also drop-in a mail here!</p>
+                        <form id="contactForm" class="contactForm" novalidate method="POST" action="">
+                            <div class="form-container">
+                                <div class="text-field text-field--l-icon">
+                                    <icon class="text-field__icon">
+                                        <i class="fas fa-signature t-acc"></i>
+                                    </icon>
+                                    <input class="text-field__input" type="text" name="name" id="name" placeholder=" "
+                                        autocomplete="off" required />
+                                    <label class="text-field__label" for="name">Name</label>
+                                </div>
+                            </div>
+                            <div class="form-container">
+                                <div class="text-field text-field--l-icon">
+                                    <icon class="text-field__icon">
+                                        <i class="fas fa-at t-acc"></i>
+                                    </icon>
+                                    <input class="text-field__input" type="email" name="email" id="email"
+                                        placeholder=" " autocomplete="off" required />
+                                    <label class="text-field__label" for="email">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="form-container">
+                                <div class="textarea">
+                                    <textarea name="text" id="textasre" cols="30" rows="10"
+                                        placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <button id="send-btn" type="submit" value="submit" title="Submit">Send me an Email</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
             <!-- <h3>technologies i worked with</h3>
                 <h3>technologies i am interested in</h3>
                 <h3>technologies i am interested in</h3> -->
@@ -209,48 +248,20 @@
         </main>
 
         <footer id="main-footer" class="section">
-            <div id="contact-form" class="row">
+            <div class="row">
                 <div class="column">
-                    <!-- <h4 class="less great">contact</h4> -->
-                    <p>Send an email to <a class="footer-mail" href="#">szronyai@gmail.com</a></p>
-                    <!-- <h4 class="less great"><span class="t-prog2">/</span>contact</h4> -->
-                    <p>Alternatively, you can also drop-in a mail here!</p>
-                    <form id="contactForm" class="contactForm" novalidate method="POST" action="">
-                        <div class="form-container">
-                            <div class="text-field text-field--l-icon">
-                                <icon class="text-field__icon">
-                                    <i class="fas fa-signature t-acc"></i>
-                                </icon>
-                                <input class="text-field__input" type="text" name="name" id="name" placeholder=" "
-                                    autocomplete="off" required />
-                                <label class="text-field__label" for="name">Name</label>
-                            </div>
-                        </div>
-                        <div class="form-container">
-                            <div class="text-field text-field--l-icon">
-                                <icon class="text-field__icon">
-                                    <i class="fas fa-at t-acc"></i>
-                                </icon>
-                                <input class="text-field__input" type="email" name="email" id="email" placeholder=" "
-                                    autocomplete="off" required />
-                                <label class="text-field__label" for="email">Email Address</label>
-                            </div>
-                        </div>
-                        <div class="form-container">
-                            <div class="textarea">
-                                <textarea name="text" id="textasre" cols="30" rows="10"
-                                    placeholder="Message"></textarea>
-                            </div>
-                        </div>
-                        <button id="send-btn" type="submit" value="submit" title="Submit">Send me an Email</button>
-                    </form>
-
-                    <span id="rights">
-                        © 2021, All rights reserved. The content protected and cannot be reused without prior
-                        permission.
-                    </span>
+                    <span>Thanks for checking my websitw!</span>
+                    <span>// It's a work in progress so check back often!</span>
+                </div>
+                <div class="column">
+                    <h3>Check out my <a href="#!" class="t-acc">case studies</a> for more information about my works
+                    </h3>
                 </div>
             </div>
+            <span id="footer-rights">
+                © 2021, All rights reserved. The content protected and cannot be reused without prior
+                permission.
+            </span>
         </footer>
 
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>

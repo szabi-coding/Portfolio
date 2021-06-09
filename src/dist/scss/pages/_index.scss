@@ -206,4 +206,23 @@ body {
             text-decoration: underline;
         }
     }
+
+    #contact {
+        p {
+            color: var(--clr-clearly-white);
+        }
+
+        .mymail {
+            text-decoration: underline;
+            text-decoration-color: var(--clr-accent);
+        }
+
+        #send-btn {
+            margin-top: 0.5rem;
+            background-color: var(--clr-accent);
+            padding: 0.5rem 1rem;
+            color: var(--clr-clearly-white);
+            width: 100%;
+        }
+    }
 }

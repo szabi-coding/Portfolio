@@ -1344,27 +1344,13 @@ a {
   padding-bottom: 0.5rem;
 }
 
-#main-footer .footer-mail {
-  text-decoration: underline;
-  -webkit-text-decoration-color: var(--clr-accent);
-          text-decoration-color: var(--clr-accent);
-}
-
-#main-footer #rights {
+#main-footer #footer-rights {
   margin-top: 4rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
   color: var(--clr-gray-3);
   text-align: center;
   font-size: 14px;
-}
-
-#main-footer #send-btn {
-  margin-top: 0.5rem;
-  background-color: var(--clr-accent);
-  padding: 0.5rem 1rem;
-  color: var(--clr-clearly-white);
-  width: 100%;
 }
 
 .iframe-video-container {
@@ -1788,6 +1774,24 @@ body {
 
 #szabi-portfolio #work a {
   text-decoration: underline;
+}
+
+#szabi-portfolio #contact p {
+  color: var(--clr-clearly-white);
+}
+
+#szabi-portfolio #contact .mymail {
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--clr-accent);
+          text-decoration-color: var(--clr-accent);
+}
+
+#szabi-portfolio #contact #send-btn {
+  margin-top: 0.5rem;
+  background-color: var(--clr-accent);
+  padding: 0.5rem 1rem;
+  color: var(--clr-clearly-white);
+  width: 100%;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
