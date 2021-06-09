@@ -5,7 +5,7 @@
     --page-max-width: 1140px;
     --num-grid-columns: 4;
     --page-gutter: 1.5rem;
-    --section-spacing: 2rem;
+    --section-spacing: 4rem;
     --grid-gutter: 1.5rem;
     //Gap between the Main contents on a page
     //Images, Texts, Icons, ETC
@@ -15,13 +15,13 @@
     @include mq(medium) {
         --num-grid-columns: 8;
         --page-gutter: 2.5rem;
-        --section-spacing: 3rem;
+        --section-spacing: 5rem;
         --sc-content-gap: 2rem 2.25rem;
     }
 
     @include mq(large) {
         --num-grid-columns: 12;
-        --section-spacing: 4rem;
+        --section-spacing: 6rem;
         --sc-content-gap: 2.5rem 3rem;
     }
 

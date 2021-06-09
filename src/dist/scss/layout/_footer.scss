@@ -1,0 +1,25 @@
+#main-footer {
+    // border: 1px solid red;
+    padding-bottom: 0.5rem;
+
+    .footer-mail {
+        text-decoration: underline;
+        text-decoration-color: var(--clr-accent);
+    }
+
+    #rights {
+        margin-top: 4rem;
+        align-self: flex-end;
+        color: var(--clr-gray-3);
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #send-btn {
+        margin-top: 0.5rem;
+        background-color: var(--clr-accent);
+        padding: 0.5rem 1rem;
+        color: var(--clr-clearly-white);
+        width: 100%;
+    }
+}

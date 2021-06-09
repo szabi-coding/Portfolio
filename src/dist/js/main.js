@@ -3,10 +3,10 @@ const burgerTransform = document.getElementById('nav-toggle')
 const navShow = document.getElementById('nav-menu')
 const navLink = document.getElementsByClassName('.nav-button__link')
 
-// burgerTransform.addEventListener("click", () => {
-//     burgerTransform.classList.toggle("is-clicked");
-//     navShow.classList.toggle("is-active");
-// });
+burgerTransform.addEventListener("click", () => {
+    burgerTransform.classList.toggle("is-clicked");
+    navShow.classList.toggle("is-active");
+});
 
 var twReact = document.getElementById('twReact')
 var typewriter = new Typewriter(twReact, {

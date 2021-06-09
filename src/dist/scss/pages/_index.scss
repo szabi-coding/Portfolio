@@ -8,10 +8,15 @@ body {
         font-size: 32px;
     }
 
-    .hf-row {
+    p {
+        font-size: 18px;
+        color: var(--clr-gray-2);
+    }
+
+    .row {
         max-width: 800px;
 
-        .hf-column {
+        .column {
             // align-items: center;
         }
     }
@@ -21,7 +26,7 @@ body {
         min-height: 100vh;
 
         h1 {
-            font-size: 62px;
+            font-size: 48px;
             margin-bottom: 0;
         }
 
@@ -31,7 +36,7 @@ body {
 
         .hero-info {
             margin-top: 1rem;
-            font-size: 18px;
+            font-size: 16px;
             color: var(--clr-gray-2);
         }
 
@@ -194,5 +199,11 @@ body {
         }
 
 
+    }
+
+    #work {
+        a {
+            text-decoration: underline;
+        }
     }
 }

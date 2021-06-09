@@ -10,7 +10,7 @@
         <title>Szabika</title>
     </head>
 
-    <body style="height: 500vh;">
+    <body style="height: ;">
         <nav class="main-nav">
             <div class="main-nav__wrapper">
                 <a href="#!" class="nav-logo">
@@ -57,7 +57,7 @@
                         </a>
                     </li>
                     <li class="nav-button">
-                        <a href="#contact" class="nav-button__link">
+                        <a href="#contact-form" class="nav-button__link">
                             <span class="t-acc">
                                 .
                             </span>
@@ -89,9 +89,9 @@
             </svg> -->
 
 
-            <section id="hero" class="hf-section">
-                <div class="hf-row">
-                    <div class="hf-column col-7">
+            <section id="hero" class="section">
+                <div class="row">
+                    <div class="column col-7">
                         <h1>
                             szabi<span class="t-acc">.</span>is<span class="t-acc">()</span>
                         </h1>
@@ -111,12 +111,12 @@
             </section>
 
 
-            <section id="about" class="hf-section">
-                <div class="hf-row">
-                    <div class="hf-column">
+            <section id="about" class="section">
+                <div class="row">
+                    <div class="column">
                         <h2>I have a huge interest in</h2>
                     </div>
-                    <div class="hf-column">
+                    <div class="column">
                         <svg id="design-logo" width="498" height="266" viewBox="0 0 498 266" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.627075" y="0.631989" width="497"
@@ -164,15 +164,12 @@
                         </svg>
                     </div>
                 </div>
-            </section>
-
-            <section id="frontend" class="hf-section">
-                <div class="hf-row">
-                    <div class="hf-column">
+                <div class="row">
+                    <div class="column">
                         <span>as well as</span>
                         <h2>Frontend Development</h2>
                     </div>
-                    <div class="hf-column">
+                    <div class="column">
                         <div id="twReact" class="terminal">
                         </div>
                     </div>
@@ -180,18 +177,28 @@
             </section>
 
 
-
-            <section id="work" class="hf-section">
-                <h1>For the past 1.5 years i have been</h1>
+            <section id="work" class="section">
+                <div class="row">
+                    <div class="column">
+                        <h2>For the past 1.5 years I was <span class="t-acc">
+                                working</span> @ <a target="_blank" href="https://www.startupcentral.dk"
+                                class="t-acc">Starup
+                                Cenral</a></h2>
+                    </div>
+                    <div class="column">
+                        <p>A SaaS company focusing on entrepreneurs and small companies.</p>
+                    </div>
+                </div>
             </section>
+
             <!-- <h3>technologies i worked with</h3>
                 <h3>technologies i am interested in</h3>
                 <h3>technologies i am interested in</h3> -->
             <!-- </section> -->
 
-            <!-- <section class="hf-section">
-                <div class="hf-row">
-                    <div class="hf-column">
+            <!-- <section class="section">
+                <div class="row">
+                    <div class="column">
                         <h2>Contact me</h2>
                         <a href="#!" class="btn">
                             Contact me
@@ -201,8 +208,49 @@
             </section> -->
         </main>
 
-        <footer>
+        <footer id="main-footer" class="section">
+            <div id="contact-form" class="row">
+                <div class="column">
+                    <!-- <h4 class="less great">contact</h4> -->
+                    <p>Send an email to <a class="footer-mail" href="#">szronyai@gmail.com</a></p>
+                    <!-- <h4 class="less great"><span class="t-prog2">/</span>contact</h4> -->
+                    <p>Alternatively, you can also drop-in a mail here!</p>
+                    <form id="contactForm" class="contactForm" novalidate method="POST" action="">
+                        <div class="form-container">
+                            <div class="text-field text-field--l-icon">
+                                <icon class="text-field__icon">
+                                    <i class="fas fa-signature t-acc"></i>
+                                </icon>
+                                <input class="text-field__input" type="text" name="name" id="name" placeholder=" "
+                                    autocomplete="off" required />
+                                <label class="text-field__label" for="name">Name</label>
+                            </div>
+                        </div>
+                        <div class="form-container">
+                            <div class="text-field text-field--l-icon">
+                                <icon class="text-field__icon">
+                                    <i class="fas fa-at t-acc"></i>
+                                </icon>
+                                <input class="text-field__input" type="email" name="email" id="email" placeholder=" "
+                                    autocomplete="off" required />
+                                <label class="text-field__label" for="email">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="form-container">
+                            <div class="textarea">
+                                <textarea name="text" id="textasre" cols="30" rows="10"
+                                    placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <button id="send-btn" type="submit" value="submit" title="Submit">Send me an Email</button>
+                    </form>
 
+                    <span id="rights">
+                        © 2021, All rights reserved. The content protected and cannot be reused without prior
+                        permission.
+                    </span>
+                </div>
+            </div>
         </footer>
 
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>

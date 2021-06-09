@@ -1,0 +1,417 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &>button {
+        align-self: flex-end;
+    }
+
+    &+.form {
+        margin-top: 1.5rem;
+    }
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // min-width: 300px;
+    // max-width: 560px;
+    margin-bottom: 0.5rem;
+    align-items: center;
+
+    &+.form-container {
+        margin-top: 1rem;
+    }
+
+    .text-field {
+        position: relative;
+        height: 3rem;
+        background: var(--clr-gray-5);
+        display: inline-flex;
+        overflow: hidden;
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 0%;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: var(--clr-accent);
+            @include transition;
+        }
+
+        &:focus-within.text-field::before {
+            width: 100%;
+        }
+
+        &__label {
+            position: absolute;
+            left: 16px;
+            pointer-events: none;
+            top: 50%;
+            transform-origin: left top;
+            transform: translateY(-50%);
+            @include transition;
+        }
+
+        &__input {
+            width: 100%;
+            height: 100%;
+            padding: 20px 16px 6px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid var(--clr-gray-2);
+            background: none;
+            color: #c7cad1;
+
+            /*Input focus*/
+            &:focus {
+
+                /*Input focus move up label*/
+                &~.text-field__label {
+                    transform: translateY(-106%) scale(0.75);
+                    color: var(--clr-accent);
+                    font-weight: bold;
+                }
+
+                &~.fa-icon {
+                    color: var(--clr-accent);
+                }
+            }
+
+            /*Input focus sticky top label*/
+            &:not(:placeholder-shown).text-field__input:not(:focus)+.text-field__label {
+                transform: translateY(-106%) scale(0.75);
+                text-align: left;
+            }
+
+
+            &:disabled {
+                // user-select: none;
+                background-color: var(--clr-gray-3);
+                cursor: not-allowed;
+            }
+        }
+
+        &--l-icon {
+            .text-field__input {
+                padding-left: 48px;
+            }
+
+            .text-field__label {
+                left: 48px;
+            }
+
+            .text-field__icon {
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .fa-icon {
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &--r-icon {
+            .text-field__input {
+                padding-right: 48px;
+            }
+
+            .text-field__icon {
+                position: absolute;
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &--flex {
+            flex: 1;
+        }
+
+        &.text-field--l-icon.text-field--r-icon {
+            .text-field__icon {
+                left: 16px;
+                right: auto;
+
+                &~.text-field__icon {
+                    right: 12px;
+                    left: auto;
+                }
+            }
+
+            .fa-icon {
+                left: 16px;
+                right: auto;
+
+                &~.fa-icon {
+                    right: 12px;
+                    left: auto;
+                }
+            }
+        }
+
+
+        &+.check-field {
+            // margin-left: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        &+.date-field {
+            margin-left: 1rem;
+        }
+    }
+
+    .helper-line {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: var(--txt-sm);
+        color: var(--clr-gray-2);
+        margin-top: 0.25em;
+        letter-spacing: .03em;
+
+        &__counter {
+            padding-left: 1rem;
+            margin-right: 0;
+            margin-left: auto;
+        }
+
+        &__error {
+            color: var(--clr-danger);
+        }
+    }
+
+    .selection-field {
+        display: flex;
+        height: 3rem;
+        line-height: 2;
+
+        &.full-width {
+            width: 100%;
+        }
+
+        select {
+            padding: 0.25rem;
+            width: 100%;
+        }
+
+        &+.text-field {
+            margin-left: 1rem;
+            flex: 1;
+        }
+    }
+
+    .check-field {
+        label {
+            display: block;
+            position: relative;
+            padding-left: 2rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            user-select: none;
+            color: #c7cad1;
+
+            /* On mouse-over, add a grey background color */
+            &:hover input~.radio-button,
+            &:hover input~.checkmark {
+                background-color: var(--clr-gray-5);
+            }
+
+            /* Hide the browser's default radio button */
+            input {
+                position: absolute;
+                cursor: pointer;
+                opacity: 0;
+
+                &:checked {
+                    &~.radio-button {
+
+                        /* Show the indicator (dot/circle) when checked */
+                        &::after {
+                            display: block;
+                        }
+                    }
+
+                    /* When the checkmark button is checked, add a blue background */
+                    &~.checkmark {
+                        background-color: #c7cad1;
+
+                        /* Show the indicator (dot/circle) when checked */
+                        &::after {
+                            display: block;
+                        }
+                    }
+
+                    &~.switch {
+                        background-color: #c7cad1;
+
+                        &::before {
+                            transform: translateX(24px);
+                        }
+                    }
+                }
+            }
+
+            /* Create a custom radio button */
+            .radio-button,
+            .checkmark {
+                position: absolute;
+                left: 0;
+                background: none;
+                border: 2px solid #c7cad1;
+                @include transition;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+
+                }
+            }
+
+            .radio-button {
+                top: -2px;
+                height: 1.25rem;
+                width: 1.25rem;
+                border-radius: 50%;
+
+                &::after {
+                    top: 2px;
+                    left: 2px;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: #c7cad1;
+                }
+            }
+
+            .checkmark {
+                top: -4px;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: var(--border-radius);
+
+                &::after {
+                    left: 6px;
+                    top: 1px;
+                    width: 8px;
+                    height: 14px;
+                    border: solid var(--clr-gray-5);
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+
+            }
+
+            .switch {
+                position: absolute;
+                cursor: pointer;
+                top: -4px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 26px;
+                width: 50px;
+                background-color: #ccc;
+                // border-radius: var(--border-radius);
+                border-radius: 14px;
+                @include transition;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 20px;
+                    width: 20px;
+                    left: 3px;
+                    bottom: 3px;
+                    // border-radius: var(--border-radius);
+                    border-radius: 50%;
+                    background-color: var(--clr-clearly-white);
+                    @include transition;
+                }
+            }
+        }
+
+        &+.check-field {
+            margin-left: 2rem;
+        }
+    }
+
+    .textarea {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: var(--clr-gray-5);
+
+        label {
+            color: #c7cad1;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .fileupload {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0.2em;
+        width: 100%;
+        flex-wrap: wrap;
+
+        img {
+            border: 3px solid var(--clr-changeable);
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            margin-left: 1rem;
+        }
+    }
+
+    .date-field {
+        display: flex;
+        flex-direction: column;
+        height: 3rem;
+
+        label {
+            color: #c7cad1;
+            font-weight: bold;
+            font-size: var(--txt-sm);
+            // margin-bottom: 0.25rem;
+        }
+
+        input {
+            height: 3rem;
+            background: var(--clr-gray-5);
+            color: var(--clr-gray-2);
+            border-radius: var(--border-radius);
+            padding: 0 0.25rem;
+
+            &:focus {
+                // outline: 2px solid var(--clr-accent);
+            }
+        }
+    }
+
+    &>button {
+        // margin-top: 0.5rem;
+        // flex: 1;
+    }
+}
