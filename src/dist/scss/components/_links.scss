@@ -1,9 +1,14 @@
 a {
     color: inherit;
     text-decoration: none;
+    @include transition;
 }
 
 a.link {
     text-decoration: underline;
-    text-decoration-color: var(--clr-accent);
+    text-decoration-color: var(--clr-accent) !important;
+
+    &:hover {
+        color: var(--clr-accent);
+    }
 }

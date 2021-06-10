@@ -1,6 +1,17 @@
 #main-footer {
     // border: 1px solid red;
+    padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+
+    h4 {
+        font-size: 19px;
+    }
+
+    span {
+        margin-top: 0.5rem;
+        font-size: 15px;
+        color: var(--clr-gray-2);
+    }
 
     #footer-rights {
         margin-top: 4rem;

@@ -21,3 +21,17 @@
         stroke-dasharray: 50% 0;
     }
 }
+
+@keyframes a {
+    0% {
+        transform: translateX(-10px)
+    }
+
+    50% {
+        transform: translateX(10px)
+    }
+
+    to {
+        transform: translateX(-10px)
+    }
+}

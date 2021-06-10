@@ -3,7 +3,7 @@
     background-color: rgb(32, 35, 42);
     font-size: 14px;
     padding: 1.25rem;
-    min-height: 325px;
+    min-height: 315px;
     max-width: 465px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .38);
@@ -14,5 +14,6 @@
 
     @include mq(medium) {
         font-size: 1rem;
+        width: 465px;
     }
 }

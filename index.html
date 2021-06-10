@@ -18,12 +18,25 @@
                 </a>
                 <ul id="nav-menu" class="nav-button-list">
                     <li class="nav-button nav-button--active">
-                        <a href="#is" class="nav-button__link">
+                        <a href="#hero" class="nav-button__link">
                             <span class="t-acc">
                                 .
                             </span>
                             <span class="nav-button__text">
                                 is
+                            </span>
+                            <span class="t-acc">
+                                ()
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-button ">
+                        <a href="#experience" class="nav-button__link">
+                            <span class="t-acc">
+                                .
+                            </span>
+                            <span class="nav-button__text">
+                                experience
                             </span>
                             <span class="t-acc">
                                 ()
@@ -79,22 +92,10 @@
             </div>
         </nav>
         <main id="szabi-portfolio">
-            <!-- <svg width="426" height="361" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="our-text" d="M1 0v360h302V17h123" />
-                <text fill="#fff" y="40" font-size="30" font-family="Montserrat, Arial">
-                    <textPath id="text-path" class="anim-text" href="#our-text">
-                        Thinking outside of the box
-                    </textPath>
-                </text>
-            </svg> -->
-
-
             <section id="hero" class="section">
                 <div class="row">
                     <div class="column col-7">
-                        <h1>
-                            szabi<span class="t-acc">.</span>is<span class="t-acc">()</span>
-                        </h1>
+                        <h1>szabi<span class="t-acc">.</span>is<span class="t-acc">()</span></h1>
                         <span id="name" class="t-acc">
                             Szabolcs Rónyai
                         </span>
@@ -103,20 +104,25 @@
                             <br>
                             from Hungary, based in Denmark
                         </p>
-                        <!-- <span id="ux" class="f-design" style="color: white;">User Experience and Design</span> -->
-                        <!-- <div id="TypeWriter"></div> -->
+                        <div id="TypeWriter"></div>
                     </div>
                     <img class="hero-image" src="src/assets/images/szabi.png" alt="">
                 </div>
-            </section>
 
+                <div class="squares square1"></div>
+                <div class="squares square2"></div>
+                <div class="squares square3"></div>
+                <div class="squares square4"></div>
+                <div class="squares square5"></div>
+                <div class="squares square6"></div>
+            </section>
 
             <section id="about" class="section">
                 <div class="row">
-                    <div class="column">
-                        <h2>I have a huge interest in</h2>
+                    <div class="column col-12">
+                        <h2>With a huge interest in</h2>
                     </div>
-                    <div class="column">
+                    <div class="column col-12">
                         <svg id="design-logo" width="498" height="266" viewBox="0 0 498 266" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.627075" y="0.631989" width="497"
@@ -164,19 +170,25 @@
                         </svg>
                     </div>
                 </div>
+
+            </section>
+
+            <section id="about-2" class="section">
                 <div class="row">
-                    <div class="column">
+                    <div class="column col-4">
                         <span>as well as</span>
                         <h2>Frontend Development</h2>
                     </div>
-                    <div class="column">
+                    <div class="column col-7">
                         <div id="twReact" class="terminal">
                         </div>
                     </div>
                 </div>
+                <img class="path path1" src="src/assets/images/svgs/blob1.png" alt="blob">
+                <img class="path path2" src="src/assets/images/svgs/blob2.png" alt="blob">
             </section>
 
-            <section id="experience" class="section">
+            <!-- <section id="experience" class="section">
                 <div class="row">
                     <div class="column">
                         <h2>Through my years I gained a lot of experience in different technologies</h2>
@@ -193,35 +205,55 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section id="work" class="section">
                 <div class="row">
-                    <div class="column">
+                    <div class="column col-11">
                         <h2>For the past 1.5 years I was <span class="t-acc">
-                                working</span> @ <a target="_blank" href="https://www.startupcentral.dk"
-                                class="t-acc">Starup
-                                Cenral</a></h2>
+                                working</span> @
+                            <a target="_blank" href="https://www.startupcentral.dk" class="link">Starup Cenral</a>
+
+                        </h2>
                     </div>
-                    <div class="column">
+                    <div class="column col-5">
                         <p>A SaaS company focusing on entrepreneurs and small companies.</p>
                         <p>Being lead UI designer and Frontend Developer involved the development of:</p>
                         <ul>
-                            <li>The recreation of the main site</li>
-                            <li>The recreation of the blog site</li>
-                            <li>The creation of a SoMe Platform</li>
+                            <li>
+                                <h4>The recreation of the <a target="_blank" href="https://www.startupcentral.dk"
+                                        class="link">Main
+                                        site</a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>The recreation of the <a href="https://www.startupcentral.dk/blogs/" target="_blank"
+                                        class="link">Blog page</a></h4>
+                            </li>
+                            <li>
+                                <h4>The creation of the SoMe Platform</h4>
+
+                            </li>
                         </ul>
+                        <p>It is currently the biggest entrepreneurial platform in Denmark with over 700 active members
+                        </p>
+                    </div>
+                    <div class="column col-7">
+                        <div class="suc-images">
+                            <img src="src/assets/images/suc/BlogPage.png" alt="BlogPage">
+                            <img src="src/assets/images/suc/dasdasd.png" alt="homepage">
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section id="contact" class="section">
                 <div id="contact-form" class="row">
-                    <div class="column">
-                        <!-- <h4 class="less great">contact</h4> -->
+                    <div class="column col-7">
+                        <h2>Feel free to contact me</h2>
                         <p>Send an email to <a class="link" href="mailto: szronyai@gmail.com">szronyai@gmail.com</a></p>
                         <!-- <h4 class="less great"><span class="t-prog2">/</span>contact</h4> -->
-                        <p>Alternatively, you can also drop-in a mail here!</p>
+                        <p>Alternatively, you can also just write an mail here!</p>
                         <form id="contactForm" class="contactForm" novalidate method="POST"
                             action="https://formspree.io/f/moqywqoj">
                             <div class="form-container">
@@ -253,41 +285,34 @@
                             <button id="send-btn" type="submit" value="submit" title="Submit">Send me an Email</button>
                         </form>
                     </div>
-                </div>
-            </section>
-            <!-- <h3>technologies i worked with</h3>
-                <h3>technologies i am interested in</h3>
-                <h3>technologies i am interested in</h3> -->
-            <!-- </section> -->
-
-            <!-- <section class="section">
-                <div class="row">
-                    <div class="column">
-                        <h2>Contact me</h2>
-                        <a href="#!" class="btn">
-                            Contact me
-                        </a>
+                    <div class="column col-5">
+                        <!-- <img src="src/assets/images/technologies/js.png" alt=""> -->
+                        <i class="fas fa-envelope-open-text contact-mail"></i>
                     </div>
                 </div>
-            </section> -->
+
+            </section>
         </main>
 
         <footer id="main-footer" class="section">
             <div class="row">
                 <div class="column">
-                    <span>Thanks for checking my website!</span>
+                    <h4>Thanks for checking my website!</h4>
                     <span>// It's a work in progress so check back often!</span>
                 </div>
-                <div class="column">
-                    <h3>Check out my <a href="#!" class="link t-acc">case studies</a> for more information about my
+                <!-- <div class="column">
+                    <h3>Check out my <a href="#!" class="link">case studies</a> for more information about my
                         works
                     </h3>
+                </div> -->
+                <div class="column col-12">
+                    <span id="footer-rights">
+                        © 2021, All rights reserved. The content protected and cannot be reused without prior
+                        permission.
+                    </span>
                 </div>
             </div>
-            <span id="footer-rights">
-                © 2021, All rights reserved. The content protected and cannot be reused without prior
-                permission.
-            </span>
+
         </footer>
 
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>

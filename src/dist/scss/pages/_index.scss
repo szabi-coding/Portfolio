@@ -4,40 +4,203 @@ body {
 }
 
 #szabi-portfolio {
+    background-image: url('/src/assets/images/svgs/dots.png');
+    background-size: contain;
+
     h2 {
         font-size: 32px;
     }
 
     p {
         font-size: 18px;
-        color: var(--clr-gray-2);
+        color: var(--clr-gray-1);
     }
 
     .row {
         max-width: 800px;
 
-        .column {
-            // align-items: center;
+        @include mq(medium) {
+            max-width: 1140px;
+
+
+        }
+    }
+
+    @include mq(medium) {
+        section {
+            min-height: 100vh;
+        }
+    }
+
+    .squares {
+        animation: a 1s infinite;
+        background: #ba54f5;
+        position: absolute;
+        // background: linear-gradient(0deg, #ba54f5, #e14eca);
+        background: linear-gradient(0deg, var(--clr-accent), #ba54f5);
+        transition: .5s ease-out;
+        overflow: hidden;
+        border-radius: 20%;
+
+        &.square1 {
+            animation: a 4s infinite;
+            height: 300px;
+            width: 300px;
+            opacity: .5;
+            left: 3%;
+            top: -21%;
+
+            @include mq(medium) {
+                height: 300px;
+                width: 300px;
+            }
+
+        }
+
+        &.square2 {
+            display: none;
+
+            animation: a 6s infinite;
+            height: 400px;
+            width: 400px;
+            opacity: .4;
+            right: -5%;
+            top: -12%;
+
+            @include mq(medium) {
+                display: block;
+            }
+        }
+
+        &.square3 {
+            animation: a 5s infinite;
+            height: 200px;
+            width: 200px;
+            opacity: .2;
+            left: -10%;
+            bottom: 0;
+
+            @include mq(medium) {
+                display: block;
+                left: 5%;
+
+            }
+        }
+
+        &.square4 {
+            animation: a 10s infinite;
+            height: 100px;
+            width: 100px;
+            opacity: .9;
+            right: 5%;
+            top: 70%;
+
+            @include mq(medium) {
+                display: block;
+                right: 27%;
+            }
+
+        }
+
+        &.square5 {
+            display: none;
+
+            animation: a 6s infinite;
+            height: 250px;
+            width: 250px;
+            opacity: .05;
+            left: 32%;
+            bottom: 29%;
+
+            @include mq(medium) {
+                display: block;
+                left: 22%;
+            }
+
+        }
+
+        &.square6 {
+            display: none;
+            animation: a 3s infinite;
+            width: 300px;
+            height: 300px;
+            right: -5%;
+            bottom: 0;
+            opacity: .1;
+
+            @include mq(medium) {
+                display: block;
+            }
+        }
+    }
+
+    .path {
+        position: absolute;
+        opacity: .02;
+        z-index: -1;
+
+        &.path1 {
+            width: 100%;
+            right: 0%;
+            top: 60%;
+
+            @include mq(medium) {
+                width: 85%;
+                right: 10%;
+                top: 40%;
+            }
+
+            @include mq(large) {
+                width: 55%;
+                right: 0;
+                top: 38%;
+            }
+        }
+
+        &.path2 {
+            width: 50%;
+            top: 0%;
+            right: 3%;
+
+
+
+            @include mq(large) {
+                width: 30%;
+                top: 15%;
+                left: 3%;
+
+            }
         }
     }
 
     #hero {
-        padding-top: 10rem;
         min-height: 100vh;
 
         h1 {
-            font-size: 48px;
+            font-size: 3.5rem;
             margin-bottom: 0;
+
+            @include mq(medium) {
+                font-size: 6rem;
+            }
         }
 
         #name {
-            font-size: 22px;
+            font-size: 1.125rem;
+
+            @include mq(medium) {
+                font-size: 1.7rem;
+            }
         }
 
         .hero-info {
             margin-top: 1rem;
-            font-size: 16px;
+            font-size: 18px;
             color: var(--clr-gray-2);
+
+            @include mq(medium) {
+                font-size: 1.8rem;
+            }
         }
 
         .hero-image {
@@ -48,102 +211,24 @@ body {
             opacity: 0;
         }
 
-        .hero-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            // border: 2px solid red;
-            padding: 10rem 1rem 0;
-            width: 100%;
-            max-width: var(--page-max-width);
-            margin: auto;
-
-
-
-            @include mq(medium) {
-                flex-direction: row;
-                align-items: center;
-                // justify-content: space-between;
-            }
-
-            h1 {
-                font-size: 48px;
-                margin: 0;
-                font-family: $font-program;
-            }
-
-            #name {
-                font-size: 18px;
-            }
-
-            .hero-info {
-                margin: 1rem 0;
-            }
-
-            #TypeWriter {
-                height: 45px;
-                color: var(--clr-clearly-white);
-            }
-
-            // span {
-            //     color: var(--clr-clearly-white);
-            // }
-
-            #fe {
-                font-size: 26px;
-            }
-
-            #ux {
-                font-size: 32px;
-            }
-
-            #gd {
-                font-size: 19px;
-            }
-
-            .Typewriter__cursor {
-                margin-left: 2px;
-                height: 50px;
-            }
-
-            .textpath-img {
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                position: absolute;
-                right: 10%;
-                top: 25%;
-            }
-
-            .textpath-section {
-                width: 100%;
-                // height: 100vh;
-                position: relative;
-                display: grid;
-                place-items: center;
-                z-index: 2;
-            }
-
-            textPath {
-                color: white;
-            }
-
-            .animate {
-                animation: reveal 1s forwards;
-            }
-
-            svg {
-                width: 100%;
-                height: 100vh;
-                position: fixed;
-                top: 0;
-                // z-index: -1;
-            }
-        }
     }
 
     #about {
+        h2 {
+            font-size: 1.5rem;
+        }
 
+        @include mq(medium) {
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .column {
+            text-align: center;
+            align-items: center;
+        }
 
         #design-logo {
             max-width: 100%;
@@ -198,23 +283,179 @@ body {
             }
         }
 
+        // padding-bottom: 0;
+    }
 
+    #about-2 {
+        h2 {
+            font-size: 38px;
+        }
+
+        @include mq(medium) {
+            .terminal {
+                width: 100%;
+                font-size: 16px;
+                max-width: 100%;
+                height: 420px;
+                height: 465px;
+            }
+
+            .row {
+                // align-items: center;
+            }
+
+
+
+            span {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 50px;
+            }
+        }
+
+        @include mq(large) {
+            .column:last-child {
+                grid-column: 6/span7;
+            }
+
+            .terminal {
+                width: 100%;
+                font-size: 16px;
+                max-width: 100%;
+                height: 420px;
+            }
+        }
     }
 
     #work {
-        a {
-            text-decoration: underline;
+        .suc-images-container {
+            position: relative;
+            margin-top: 0.5rem;
+            // padding-bottom: 56.25%;
+            // padding-bottom: 100%;
+            /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+            // height: 0;
+            // overflow: hidden;
+        }
+
+        .suc-images {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+
+            &:hover {
+                img:last-child {
+
+                    left: 15rem;
+                    top: 5rem;
+                    transform: rotateZ(20deg);
+
+                    @include mq(medium) {
+                        left: 25rem;
+                    }
+
+                }
+            }
+
+            img {
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, .38);
+                // @include transition;
+                transition: 0.2s ease-in-out;
+
+
+                &:last-child {
+                    z-index: 2;
+                    position: absolute;
+                    left: 1rem;
+                    transform: rotateZ(2deg);
+                    top: 0;
+                }
+            }
+        }
+
+        @include mq(medium) {
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        ul li {
+            position: relative;
+            margin-left: 2.25em;
+            margin-bottom: 1.5em;
+            margin-top: 1rem;
+
+            h4 {
+                font-size: 16px;
+            }
+
+            &::before {
+                content: '●';
+                text-align: center;
+                z-index: 2;
+                position: absolute;
+                color: var(--clr-accent);
+                font-weight: bold;
+                width: 1.25em;
+                font-size: 1.25em;
+                top: -0.2em;
+                margin-left: -1.75em;
+            }
+        }
+
+    }
+
+    #experience {
+        .tech {
+            position: relative;
+            height: 200px;
+
+            &__img {
+                max-width: 80px;
+                position: absolute;
+
+                &:nth-child(1) {
+                    top: 5rem;
+                }
+            }
         }
     }
 
     #contact {
         p {
-            color: var(--clr-clearly-white);
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 1.625rem;
+            margin-bottom: 0.5rem;
         }
 
         .mymail {
             text-decoration: underline;
             text-decoration-color: var(--clr-accent);
+        }
+
+        .column {
+            // column-span: ;
+        }
+
+        .contact-mail {
+            display: none;
+            position: absolute;
+            font-size: 40rem;
+            opacity: 0.05;
+            right: 0;
+            top: 50%;
+            transform: translate(25%, -50%);
+
+            @include mq(large) {
+                display: block;
+            }
         }
 
         #send-btn {

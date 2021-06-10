@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Comic+Neue|Montserrat|Open+Sans|Oswald|Playfair+Display|Poppins|Raleway|Roboto&display=swap");
 @import url("https://use.typekit.net/miq0udh.css");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro&family=Yellowtail&display=swap");
@@ -41,6 +42,36 @@
   }
   100% {
     stroke-dasharray: 50% 0;
+  }
+}
+
+@-webkit-keyframes a {
+  0% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  to {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+}
+
+@keyframes a {
+  0% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  to {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 }
 
@@ -1013,12 +1044,18 @@ input[type="reset"] span {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a.link {
   text-decoration: underline;
-  -webkit-text-decoration-color: var(--clr-accent);
-          text-decoration-color: var(--clr-accent);
+  -webkit-text-decoration-color: var(--clr-accent) !important;
+          text-decoration-color: var(--clr-accent) !important;
+}
+
+a.link:hover {
+  color: var(--clr-accent);
 }
 
 .main-nav {
@@ -1078,7 +1115,7 @@ a.link {
   display: grid;
   place-items: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .main-nav .nav-button-list {
@@ -1235,7 +1272,7 @@ a.link {
 @media screen and (min-width: 768px) {
   .main-nav .nav-button-list .nav-button__link {
     height: 100%;
-    font-size: 1rem;
+    font-size: 1.125rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -1326,7 +1363,7 @@ a.link {
   background-color: #20232a;
   font-size: 14px;
   padding: 1.25rem;
-  min-height: 325px;
+  min-height: 315px;
   max-width: 465px;
   border-radius: 8px;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
@@ -1343,11 +1380,23 @@ a.link {
 @media screen and (min-width: 768px) {
   .terminal {
     font-size: 1rem;
+    width: 465px;
   }
 }
 
 #main-footer {
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+#main-footer h4 {
+  font-size: 19px;
+}
+
+#main-footer span {
+  margin-top: 0.5rem;
+  font-size: 15px;
+  color: var(--clr-gray-2);
 }
 
 #main-footer #footer-rights {
@@ -1379,6 +1428,7 @@ a.link {
 /* Basic Grid System */
 /* ========================================================================== */
 .section {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1396,6 +1446,7 @@ a.link {
   padding-bottom: var(--section-spacing);
   padding-left: var(--page-gutter);
   padding-right: var(--page-gutter);
+  overflow: hidden;
 }
 
 .row {
@@ -1407,6 +1458,14 @@ a.link {
   width: 100%;
   max-width: var(--page-max-width);
   margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .row + .row-reverse .column:first-child {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .column {
@@ -1578,37 +1637,229 @@ body {
   min-height: 100vh;
 }
 
+#szabi-portfolio {
+  background-image: url("/src/assets/images/svgs/dots.png");
+  background-size: contain;
+}
+
 #szabi-portfolio h2 {
   font-size: 32px;
 }
 
 #szabi-portfolio p {
   font-size: 18px;
-  color: var(--clr-gray-2);
+  color: var(--clr-gray-1);
 }
 
 #szabi-portfolio .row {
   max-width: 800px;
 }
 
+@media screen and (min-width: 768px) {
+  #szabi-portfolio .row {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio section {
+    min-height: 100vh;
+  }
+}
+
+#szabi-portfolio .squares {
+  -webkit-animation: a 1s infinite;
+          animation: a 1s infinite;
+  background: #ba54f5;
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--clr-accent)), to(#ba54f5));
+  background: linear-gradient(0deg, var(--clr-accent), #ba54f5);
+  -webkit-transition: .5s ease-out;
+  transition: .5s ease-out;
+  overflow: hidden;
+  border-radius: 20%;
+}
+
+#szabi-portfolio .squares.square1 {
+  -webkit-animation: a 4s infinite;
+          animation: a 4s infinite;
+  height: 300px;
+  width: 300px;
+  opacity: .5;
+  left: 3%;
+  top: -21%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio .squares.square1 {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+#szabi-portfolio .squares.square2 {
+  display: none;
+  -webkit-animation: a 6s infinite;
+          animation: a 6s infinite;
+  height: 400px;
+  width: 400px;
+  opacity: .4;
+  right: -5%;
+  top: -12%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio .squares.square2 {
+    display: block;
+  }
+}
+
+#szabi-portfolio .squares.square3 {
+  -webkit-animation: a 5s infinite;
+          animation: a 5s infinite;
+  height: 200px;
+  width: 200px;
+  opacity: .2;
+  left: -10%;
+  bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio .squares.square3 {
+    display: block;
+    left: 5%;
+  }
+}
+
+#szabi-portfolio .squares.square4 {
+  -webkit-animation: a 10s infinite;
+          animation: a 10s infinite;
+  height: 100px;
+  width: 100px;
+  opacity: .9;
+  right: 5%;
+  top: 70%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio .squares.square4 {
+    display: block;
+    right: 27%;
+  }
+}
+
+#szabi-portfolio .squares.square5 {
+  display: none;
+  -webkit-animation: a 6s infinite;
+          animation: a 6s infinite;
+  height: 250px;
+  width: 250px;
+  opacity: .05;
+  left: 32%;
+  bottom: 29%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio .squares.square5 {
+    display: block;
+    left: 22%;
+  }
+}
+
+#szabi-portfolio .squares.square6 {
+  display: none;
+  -webkit-animation: a 3s infinite;
+          animation: a 3s infinite;
+  width: 300px;
+  height: 300px;
+  right: -5%;
+  bottom: 0;
+  opacity: .1;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio .squares.square6 {
+    display: block;
+  }
+}
+
+#szabi-portfolio .path {
+  position: absolute;
+  opacity: .02;
+  z-index: -1;
+}
+
+#szabi-portfolio .path.path1 {
+  width: 100%;
+  right: 0%;
+  top: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio .path.path1 {
+    width: 85%;
+    right: 10%;
+    top: 40%;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  #szabi-portfolio .path.path1 {
+    width: 55%;
+    right: 0;
+    top: 38%;
+  }
+}
+
+#szabi-portfolio .path.path2 {
+  width: 50%;
+  top: 0%;
+  right: 3%;
+}
+
+@media screen and (min-width: 1140px) {
+  #szabi-portfolio .path.path2 {
+    width: 30%;
+    top: 15%;
+    left: 3%;
+  }
+}
+
 #szabi-portfolio #hero {
-  padding-top: 10rem;
   min-height: 100vh;
 }
 
 #szabi-portfolio #hero h1 {
-  font-size: 48px;
+  font-size: 3.5rem;
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #hero h1 {
+    font-size: 6rem;
+  }
+}
+
 #szabi-portfolio #hero #name {
-  font-size: 22px;
+  font-size: 1.125rem;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #hero #name {
+    font-size: 1.7rem;
+  }
 }
 
 #szabi-portfolio #hero .hero-info {
   margin-top: 1rem;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--clr-gray-2);
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #hero .hero-info {
+    font-size: 1.8rem;
+  }
 }
 
 #szabi-portfolio #hero .hero-image {
@@ -1619,103 +1870,22 @@ body {
   opacity: 0;
 }
 
-#szabi-portfolio #hero .hero-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10rem 1rem 0;
-  width: 100%;
-  max-width: var(--page-max-width);
-  margin: auto;
+#szabi-portfolio #about h2 {
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
-  #szabi-portfolio #hero .hero-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  #szabi-portfolio #about h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
-#szabi-portfolio #hero .hero-container h1 {
-  font-size: 48px;
-  margin: 0;
-  font-family: "Source Code Pro", monospace;
-}
-
-#szabi-portfolio #hero .hero-container #name {
-  font-size: 18px;
-}
-
-#szabi-portfolio #hero .hero-container .hero-info {
-  margin: 1rem 0;
-}
-
-#szabi-portfolio #hero .hero-container #TypeWriter {
-  height: 45px;
-  color: var(--clr-clearly-white);
-}
-
-#szabi-portfolio #hero .hero-container #fe {
-  font-size: 26px;
-}
-
-#szabi-portfolio #hero .hero-container #ux {
-  font-size: 32px;
-}
-
-#szabi-portfolio #hero .hero-container #gd {
-  font-size: 19px;
-}
-
-#szabi-portfolio #hero .hero-container .Typewriter__cursor {
-  margin-left: 2px;
-  height: 50px;
-}
-
-#szabi-portfolio #hero .hero-container .textpath-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-  right: 10%;
-  top: 25%;
-}
-
-#szabi-portfolio #hero .hero-container .textpath-section {
-  width: 100%;
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  z-index: 2;
-}
-
-#szabi-portfolio #hero .hero-container textPath {
-  color: white;
-}
-
-#szabi-portfolio #hero .hero-container .animate {
-  -webkit-animation: reveal 1s forwards;
-          animation: reveal 1s forwards;
-}
-
-#szabi-portfolio #hero .hero-container svg {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
+#szabi-portfolio #about .column {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #szabi-portfolio #about #design-logo {
@@ -1778,18 +1948,166 @@ body {
           animation: line-anim 2s ease forwards;
 }
 
-#szabi-portfolio #work a {
-  text-decoration: underline;
+#szabi-portfolio #about-2 h2 {
+  font-size: 38px;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #about-2 .terminal {
+    width: 100%;
+    font-size: 16px;
+    max-width: 100%;
+    height: 420px;
+    height: 465px;
+  }
+  #szabi-portfolio #about-2 span {
+    font-size: 22px;
+  }
+  #szabi-portfolio #about-2 h2 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  #szabi-portfolio #about-2 .column:last-child {
+    grid-column: 6/span7;
+  }
+  #szabi-portfolio #about-2 .terminal {
+    width: 100%;
+    font-size: 16px;
+    max-width: 100%;
+    height: 420px;
+  }
+}
+
+#szabi-portfolio #work .suc-images-container {
+  position: relative;
+  margin-top: 0.5rem;
+  /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+}
+
+#szabi-portfolio #work .suc-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+#szabi-portfolio #work .suc-images:hover img:last-child {
+  left: 15rem;
+  top: 5rem;
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #work .suc-images:hover img:last-child {
+    left: 25rem;
+  }
+}
+
+#szabi-portfolio #work .suc-images img {
+  width: 100%;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#szabi-portfolio #work .suc-images img:last-child {
+  z-index: 2;
+  position: absolute;
+  left: 1rem;
+  -webkit-transform: rotateZ(2deg);
+          transform: rotateZ(2deg);
+  top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+#szabi-portfolio #work ul li {
+  position: relative;
+  margin-left: 2.25em;
+  margin-bottom: 1.5em;
+  margin-top: 1rem;
+}
+
+#szabi-portfolio #work ul li h4 {
+  font-size: 16px;
+}
+
+#szabi-portfolio #work ul li::before {
+  content: '●';
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  color: var(--clr-accent);
+  font-weight: bold;
+  width: 1.25em;
+  font-size: 1.25em;
+  top: -0.2em;
+  margin-left: -1.75em;
+}
+
+#szabi-portfolio #experience .tech {
+  position: relative;
+  height: 200px;
+}
+
+#szabi-portfolio #experience .tech__img {
+  max-width: 80px;
+  position: absolute;
+}
+
+#szabi-portfolio #experience .tech__img:nth-child(1) {
+  top: 5rem;
 }
 
 #szabi-portfolio #contact p {
-  color: var(--clr-clearly-white);
+  font-size: 16px;
+}
+
+#szabi-portfolio #contact h2 {
+  font-size: 1.625rem;
+  margin-bottom: 0.5rem;
 }
 
 #szabi-portfolio #contact .mymail {
   text-decoration: underline;
   -webkit-text-decoration-color: var(--clr-accent);
           text-decoration-color: var(--clr-accent);
+}
+
+#szabi-portfolio #contact .contact-mail {
+  display: none;
+  position: absolute;
+  font-size: 40rem;
+  opacity: 0.05;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(25%, -50%);
+          transform: translate(25%, -50%);
+}
+
+@media screen and (min-width: 1140px) {
+  #szabi-portfolio #contact .contact-mail {
+    display: block;
+  }
 }
 
 #szabi-portfolio #contact #send-btn {
