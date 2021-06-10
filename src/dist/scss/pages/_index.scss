@@ -367,11 +367,19 @@ body {
                         top: 3rem;
                         left: 13rem;
                         transform: rotateZ(18deg);
+                        -ms-transform: rotateZ(18deg);
+                        -webkit-transform: rotateZ(18deg);
+                        -moz-transform: rotateZ(18deg);
+                        -o-transform: rotateZ(18deg);
 
                         @include mq(large) {
                             top: 2rem;
                             left: 20rem;
                             transform: rotateZ(22deg);
+                            -ms-transform: rotateZ(22deg);
+                            -webkit-transform: rotateZ(22deg);
+                            -moz-transform: rotateZ(22deg);
+                            -o-transform: rotateZ(22deg);
                         }
                     }
 
@@ -388,6 +396,10 @@ body {
                     top: 0;
                     left: 0;
                     transform: rotateZ(0deg);
+                    -ms-transform: rotateZ(0deg);
+                    -webkit-transform: rotateZ(0deg);
+                    -moz-transform: rotateZ(0deg);
+                    -o-transform: rotateZ(0deg);
                     height: fit-content;
                 }
 
@@ -395,6 +407,10 @@ body {
                     top: 1rem;
                     left: 4rem;
                     transform: rotateZ(4deg);
+                    -ms-transform: rotateZ(4deg);
+                    -webkit-transform: rotateZ(4deg);
+                    -moz-transform: rotateZ(4deg);
+                    -o-transform: rotateZ(4deg);
                 }
 
                 &:not(:first-child) {

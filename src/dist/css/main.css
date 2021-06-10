@@ -2048,16 +2048,22 @@ body {
 #szabi-portfolio #work .suc-images:hover img:nth-child(2) {
   top: 3rem;
   left: 13rem;
+  transform: rotateZ(18deg);
+  -ms-transform: rotateZ(18deg);
   -webkit-transform: rotateZ(18deg);
-          transform: rotateZ(18deg);
+  -moz-transform: rotateZ(18deg);
+  -o-transform: rotateZ(18deg);
 }
 
 @media screen and (min-width: 1140px) {
   #szabi-portfolio #work .suc-images:hover img:nth-child(2) {
     top: 2rem;
     left: 20rem;
+    transform: rotateZ(22deg);
+    -ms-transform: rotateZ(22deg);
     -webkit-transform: rotateZ(22deg);
-            transform: rotateZ(22deg);
+    -moz-transform: rotateZ(22deg);
+    -o-transform: rotateZ(22deg);
   }
 }
 
@@ -2073,8 +2079,11 @@ body {
 #szabi-portfolio #work .suc-images img:first-child {
   top: 0;
   left: 0;
+  transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
   -webkit-transform: rotateZ(0deg);
-          transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -2083,8 +2092,11 @@ body {
 #szabi-portfolio #work .suc-images img:nth-child(2) {
   top: 1rem;
   left: 4rem;
+  transform: rotateZ(4deg);
+  -ms-transform: rotateZ(4deg);
   -webkit-transform: rotateZ(4deg);
-          transform: rotateZ(4deg);
+  -moz-transform: rotateZ(4deg);
+  -o-transform: rotateZ(4deg);
 }
 
 #szabi-portfolio #work .suc-images img:not(:first-child) {
