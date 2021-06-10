@@ -75,6 +75,36 @@
   }
 }
 
+@-webkit-keyframes e {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  to {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@keyframes e {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  to {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
 /**
  * Set up a decent box model on the root element
  */
@@ -1997,6 +2027,12 @@ body {
   }
 }
 
+#szabi-portfolio #work .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #szabi-portfolio #work .suc-images {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2099,27 +2135,142 @@ body {
   margin-left: -1.75em;
 }
 
-#szabi-portfolio #experience .tech {
+#szabi-portfolio #experience h2 {
+  font-size: 3rem;
+}
+
+#szabi-portfolio #experience lottie-player {
+  margin-top: 3rem;
+  height: auto;
+  width: 100%;
+}
+
+#szabi-portfolio #experience .column {
   position: relative;
-  height: 200px;
+}
+
+#szabi-portfolio #experience .tech {
+  position: absolute;
+  height: 100%;
+  width: 110%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 #szabi-portfolio #experience .tech__img {
-  max-width: 80px;
+  width: 40px;
   position: absolute;
+  -webkit-transition: .5s ease-out;
+  transition: .5s ease-out;
+  -webkit-animation: e 5s infinite;
+          animation: e 5s infinite;
+  border-radius: 0;
+  opacity: .8;
 }
 
 #szabi-portfolio #experience .tech__img:nth-child(1) {
-  top: 5rem;
+  -webkit-animation: e 5s infinite;
+          animation: e 5s infinite;
+  width: 30px;
+  right: 20%;
+  top: 5%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #experience .tech__img:nth-child(1) {
+    right: 25%;
+    top: 3%;
+  }
+}
+
+#szabi-portfolio #experience .tech__img:nth-child(2) {
+  -webkit-animation: e 10s infinite;
+          animation: e 10s infinite;
+  width: 35px;
+  bottom: 0%;
+  left: 19%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #experience .tech__img:nth-child(2) {
+    bottom: 10%;
+    left: 20%;
+  }
+}
+
+#szabi-portfolio #experience .tech__img:nth-child(3) {
+  -webkit-animation: e 7s infinite;
+          animation: e 7s infinite;
+  width: 55px;
+  left: 27%;
+  top: 8%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #experience .tech__img:nth-child(3) {
+    right: 15%;
+    top: 82%;
+    top: 2%;
+  }
+}
+
+#szabi-portfolio #experience .tech__img:nth-child(4) {
+  -webkit-animation: e 8s infinite;
+          animation: e 8s infinite;
+  width: 40px;
+  right: 9%;
+  top: 78%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #experience .tech__img:nth-child(4) {
+    right: 15%;
+    top: 82%;
+  }
+}
+
+#szabi-portfolio #experience .tech__img:nth-child(5) {
+  -webkit-animation: e 8s infinite;
+          animation: e 8s infinite;
+  width: 72px;
+  bottom: 48%;
+  left: -2%;
+}
+
+#szabi-portfolio #experience .tech__img:nth-child(6) {
+  -webkit-animation: e 9s infinite;
+          animation: e 9s infinite;
+  width: 45px;
+  bottom: 50%;
+  left: 88%;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #experience .tech__img:nth-child(6) {
+    bottom: 57%;
+  }
 }
 
 #szabi-portfolio #contact p {
-  font-size: 16px;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #contact p {
+    font-size: 1.5rem;
+  }
 }
 
 #szabi-portfolio #contact h2 {
   font-size: 1.625rem;
   margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  #szabi-portfolio #contact h2 {
+    font-size: 3rem;
+  }
 }
 
 #szabi-portfolio #contact .mymail {
