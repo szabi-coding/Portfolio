@@ -1,3 +1,8 @@
+// const navMenu = document.getElementById('nav-menu'),
+//     navToggle = document.getElementById('nav-toggle'),
+//     navClose = document.getElementById('nav-close')
+
+
 // Navmenu show Y hidden
 const burgerTransform = document.getElementById('nav-toggle')
 const navShow = document.getElementById('nav-menu')
@@ -7,6 +12,21 @@ burgerTransform.addEventListener("click", () => {
     burgerTransform.classList.toggle("is-clicked");
     navShow.classList.toggle("is-active");
 });
+
+/*=============== REMOVE MENU MOBILE ===============*/
+const navLinks = document.querySelectorAll('.nav-button__link')
+
+function linkAction() {
+    const navMenu = document.getElementById('nav-menu')
+    const navToggle = document.getElementById('nav-toggle')
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('is-active')
+    navToggle.classList.remove('is-clicked')
+}
+navLinks.forEach(n => n.addEventListener('click', linkAction))
+
+
+
 
 var twReact = document.getElementById('twReact')
 var typewriter = new Typewriter(twReact, {

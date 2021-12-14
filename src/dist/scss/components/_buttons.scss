@@ -32,8 +32,8 @@ input[type="reset"] {
 }
 
 .btn {
-    background: var(--button-color);
-    background: #3a0ca3;
+    background-color: var(--clr-accent);
+    // background: #3a0ca3;
     color: var(--clr-clearly-white);
     padding: 0.25rem 0.875rem;
     width: fit-content;
@@ -42,7 +42,8 @@ input[type="reset"] {
     &:active,
     &:hover {
         // background-color: var(--clr-primary-dark);
-        background: var(--button-hover);
+        // background: var(--button-hover);
+        background-color: var(--clr-accent-dark);
     }
 
     &:focus {

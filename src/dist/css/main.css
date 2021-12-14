@@ -605,8 +605,7 @@ input[type="reset"] span {
 }
 
 .btn {
-  background: var(--button-color);
-  background: #3a0ca3;
+  background-color: var(--clr-accent);
   color: var(--clr-clearly-white);
   padding: 0.25rem 0.875rem;
   width: -webkit-fit-content;
@@ -617,7 +616,7 @@ input[type="reset"] span {
 }
 
 .btn:active, .btn:hover {
-  background: var(--button-hover);
+  background-color: var(--clr-accent-dark);
 }
 
 .form {
@@ -1836,7 +1835,7 @@ body {
   #szabi-portfolio .path.path1 {
     width: 55%;
     right: 0;
-    top: 38%;
+    top: 30%;
   }
 }
 
@@ -1859,11 +1858,17 @@ body {
 }
 
 #szabi-portfolio #hero h1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
+  #szabi-portfolio #hero h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1140px) {
   #szabi-portfolio #hero h1 {
     font-size: 6rem;
   }
@@ -1889,6 +1894,12 @@ body {
   #szabi-portfolio #hero .hero-info {
     font-size: 1.8rem;
   }
+}
+
+#szabi-portfolio #hero .hero-info span {
+  display: block;
+  font-size: 0.9em;
+  padding-top: 0.5rem;
 }
 
 #szabi-portfolio #hero .hero-image {
