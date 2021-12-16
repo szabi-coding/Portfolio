@@ -27,7 +27,6 @@ navLinks.forEach(n => n.addEventListener('click', linkAction))
 
 
 
-
 var twReact = document.getElementById('twReact')
 var typewriter = new Typewriter(twReact, {
     delay: 25,
