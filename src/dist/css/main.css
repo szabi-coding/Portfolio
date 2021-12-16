@@ -2097,6 +2097,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   z-index: 1;
+  max-height: 100%;
 }
 
 #szabi-portfolio #work .suc-images img:nth-child(2) {
