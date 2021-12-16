@@ -117,4 +117,10 @@
     .col-4-fix {
         grid-column: unset;
     }
+
+    &.centered {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
 }
