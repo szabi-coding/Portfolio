@@ -421,6 +421,8 @@ body {
                     -webkit-transform: rotateZ(4deg);
                     -moz-transform: rotateZ(4deg);
                     -o-transform: rotateZ(4deg);
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
                 }
 
                 &:not(:first-child) {
