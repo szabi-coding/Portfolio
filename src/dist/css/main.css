@@ -2492,7 +2492,11 @@ body {
           align-items: center;
   margin-right: 3%;
   margin-bottom: 1.5rem;
-  width: 45%;
+  width: 48.5%;
+}
+
+#cs-branding .color-palette-row .color-palette-container:nth-child(even) {
+  margin-right: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -2500,6 +2504,9 @@ body {
     width: 22.75%;
     margin-top: 3rem;
     margin-bottom: 4rem;
+  }
+  #cs-branding .color-palette-row .color-palette-container:nth-child(even) {
+    margin-right: 3%;
   }
   #cs-branding .color-palette-row .color-palette-container:last-child {
     margin-right: 0;
