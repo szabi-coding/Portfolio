@@ -19,12 +19,40 @@
                     <i class="fas fa-dice-d20"></i>
                     <!-- <i class="fa-brands fa-react"></i> -->
                 </a>
-                <ul id="nav-menu" class="nav-button-list" style="position: relative;">
-                    <li class="nav-button nav-button" style="display: block !important;">
+                <ul id="nav-menu" class="nav-button-list">
+                    <li class="nav-button nav-button--active">
                         <a href="#hero" class="nav-button__link">
                             <span class="t-acc">
-                                <- .</span> <span class="nav-button__text">
-                                    Take me home
+                                .
+                            </span>
+                            <span class="nav-button__text">
+                                Main
+                            </span>
+                            <span class="t-acc">
+                                ()
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-button ">
+                        <a href="#experience" class="nav-button__link">
+                            <span class="t-acc">
+                                .
+                            </span>
+                            <span class="nav-button__text">
+                                Blog
+                            </span>
+                            <span class="t-acc">
+                                ()
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-button">
+                        <a href="#work" class="nav-button__link">
+                            <span class="t-acc">
+                                .
+                            </span>
+                            <span class="nav-button__text">
+                                SoMe
                             </span>
                             <span class="t-acc">
                                 ()
@@ -32,10 +60,18 @@
                         </a>
                     </li>
                 </ul>
+
+                <button id="nav-toggle" class="nav-burger">
+                    <span class="nav-burger__bar" id="bar-1"></span>
+                    <span class="nav-burger__bar" id="bar-2"></span>
+                    <span class="nav-burger__bar" id="bar-3"></span>
+                </button>
             </div>
         </nav>
         <main id="suc-casestudy" style="background-image: url('src/assets/images/svgs/dots.png');">
             <section id="cs-hero" class="section">
+                <div class="cs-hero-img">
+                </div>
                 <div class="row">
                     <div class="column centered col-12">
                         <h1>StartupCentral Redesign</h1>
@@ -55,15 +91,92 @@
                 </div>
             </section>
 
+
+
+
             <section id="cs-project" class="section">
                 <div class="row">
                     <div class="column centered col-12">
                         <h2>The Project</h2>
-                        <p>StartupCentral</p>
-                        <a href="#!" class="btn">Visit Website</a>
+                        <p>StartupCentral is a benefit club for entrepreneurs that focuses on client relationships and
+                            partner deals
+                            with other firms. The premise of the company is to create an online social platform where
+                            entrepreneurs can find help and information about starting and managing a business no matter
+                            whether
+                            they just want to start, or they have already started the process</p>
+                        <a href="https://www.startupcentral.dk/" class="btn">Visit Website</a>
+                    </div>
+                </div>
+                <img src="src/assets/images/suc/suc-white-logo.svg" alt="">
+            </section>
+
+            <section id="cs-branding" class="section">
+                <div class="row">
+                    <div class="column col-6">
+                        <h3> An elegant design.</h3>
+                        <p>
+                            As the <span class="t-acc">Front-end Developer</span>, I was responsible of building the
+                            entire UI for the new website,
+                            redefining the User Experience and studying new interactions between the User and the
+                            Interface.
+                        </p>
+                        <p>
+                            The process started by creating wireframes and UI components in <span class="t-acc">Adobe
+                                Xd</span> first with the home page, then the Blog and the SoMe page respectively.
+                        </p>
+                    </div>
+                    <div class="column col-6">
+                        <img src="src/assets/images/suc/dasdasd.png" alt="">
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="column col-6">
+                        <img src="src/assets/images/suc/dasdasd.png" alt="">
+                    </div>
+                    <div class="column col-6"></div>
+                </div>
+                <div class="color-palette-row">
+                    <div class="color-palette-container">
+                        <div class="color-palette c1">
+                        </div>
+                        <h5 class="color-palette-name">
+                            $space-cadet
+                        </h5>
+                    </div>
+                    <div class="color-palette-container">
+                        <div class="color-palette c2">
+                        </div>
+                        <h5 class="color-palette-name">
+                            $sizzling-red
+                        </h5>
+                    </div>
+                    <div class="color-palette-container">
+                        <div class="color-palette c3">
+                        </div>
+                        <h5 class="color-palette-name">
+                            $white
+                        </h5>
+                    </div>
+                    <div class="color-palette-container">
+                        <div class="color-palette c4">
+                        </div>
+                        <h5 class="color-palette-name">
+                            $cultured
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="row alphabet">
+                    <div class="column col-6">
+                        <h3>Sofia Pro</h3>
+                        <h3 class="reset">a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0</h3>
+                    </div>
+                    <div class="column col-6">
+                        <p>Poppins</p>
+                        <p class="reset">a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0</p>
+                    </div>
+                </div>
             </section>
         </main>
 

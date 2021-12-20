@@ -2362,6 +2362,207 @@ body {
   background-color: var(--clr-accent-dark);
 }
 
+#suc-casestudy {
+  background-size: contain;
+}
+
+#suc-casestudy h2 {
+  font-size: 32px;
+}
+
+#suc-casestudy p {
+  font-size: 18px;
+  color: var(--clr-gray-1);
+}
+
+#suc-casestudy .row {
+  max-width: 800px;
+}
+
+@media screen and (min-width: 768px) {
+  #suc-casestudy .row {
+    max-width: 1140px;
+  }
+}
+
+#cs-hero {
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#cs-hero .cs-hero-img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/src/assets/images/suc/denmark-network.svg");
+  background-repeat: no-repeat;
+  -webkit-filter: opacity(0.05);
+          filter: opacity(0.05);
+}
+
+#cs-hero h1 {
+  font-size: 2.75rem;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 768px) {
+  #cs-hero h1 {
+    font-size: 4rem;
+  }
+}
+
+#cs-hero .row {
+  margin-bottom: 0;
+}
+
+#cs-hero p {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+#cs-project {
+  padding-bottom: 7rem;
+}
+
+#cs-project h2 {
+  font-size: 2.5rem;
+}
+
+#cs-project p {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#cs-project img {
+  position: absolute;
+  bottom: 0rem;
+  left: 1.5rem;
+  width: 70%;
+  opacity: 0.2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+  #cs-project img {
+    width: 50%;
+  }
+}
+
+#cs-branding h3 {
+  margin-bottom: 0.75rem;
+}
+
+#cs-branding .color-palette-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  max-width: 1140px;
+}
+
+#cs-branding .color-palette-row .color-palette-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 3%;
+  margin-bottom: 1.5rem;
+  width: 45%;
+}
+
+@media screen and (min-width: 768px) {
+  #cs-branding .color-palette-row .color-palette-container {
+    width: 22.75%;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+  #cs-branding .color-palette-row .color-palette-container:last-child {
+    margin-right: 0;
+  }
+}
+
+#cs-branding .color-palette-row .color-palette-container .color-palette {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 20px 0 #000;
+          box-shadow: 0 5px 20px 0 #000;
+  margin: auto;
+}
+
+#cs-branding .color-palette-row .color-palette-container .color-palette.c1 {
+  background-color: #182848;
+}
+
+#cs-branding .color-palette-row .color-palette-container .color-palette.c2 {
+  background-color: #ff4a59;
+}
+
+#cs-branding .color-palette-row .color-palette-container .color-palette.c3 {
+  background-color: #fff;
+}
+
+#cs-branding .color-palette-row .color-palette-container .color-palette.c4 {
+  background-color: #f1f2f4;
+}
+
+#cs-branding .color-palette-row .color-palette-container .color-palette-name {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#cs-branding .alphabet {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#cs-branding .alphabet h3,
+#cs-branding .alphabet p {
+  font-size: 1.6rem;
+  margin-bottom: 0rem;
+  font-weight: 400;
+}
+
+#cs-branding .alphabet .reset {
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+  margin-top: .75rem;
+  line-height: 2.25rem;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document */
 /* ========================================================================== */
