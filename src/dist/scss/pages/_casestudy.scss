@@ -79,6 +79,11 @@
         @include mq(medium) {
             width: 50%;
         }
+
+        @include mq(medium) {
+            width: 30%;
+            left: 10%;
+        }
     }
 
     padding-bottom: 7rem;
@@ -97,6 +102,11 @@
         margin-top: 2rem;
         margin-bottom: 1rem;
         max-width: 1140px;
+
+        @include mq(medium) {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
 
         .color-palette-container {
             display: flex;
@@ -177,5 +187,16 @@
             margin-top: .75rem;
             line-height: 2.25rem;
         }
+    }
+}
+
+#cs-blog {
+    h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
