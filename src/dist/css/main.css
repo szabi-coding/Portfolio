@@ -2051,6 +2051,81 @@ body {
   }
 }
 
+#szabi-portfolio #work .suc-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  height: auto;
+}
+
+#szabi-portfolio #work .suc-images:hover img:nth-child(2) {
+  top: 3rem;
+  left: 13rem;
+  transform: rotateZ(18deg);
+  -ms-transform: rotateZ(18deg);
+  -webkit-transform: rotateZ(18deg);
+  -moz-transform: rotateZ(18deg);
+  -o-transform: rotateZ(18deg);
+}
+
+@media screen and (min-width: 1140px) {
+  #szabi-portfolio #work .suc-images:hover img:nth-child(2) {
+    top: 2rem;
+    left: 20rem;
+    transform: rotateZ(22deg);
+    -ms-transform: rotateZ(22deg);
+    -webkit-transform: rotateZ(22deg);
+    -moz-transform: rotateZ(22deg);
+    -o-transform: rotateZ(22deg);
+  }
+}
+
+#szabi-portfolio #work .suc-images img {
+  width: 100%;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
+  -webkit-transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#szabi-portfolio #work .suc-images img:first-child {
+  top: 0;
+  left: 0;
+  transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 1;
+  max-height: 100%;
+}
+
+#szabi-portfolio #work .suc-images img:nth-child(2) {
+  top: 1rem;
+  left: 4rem;
+  transform: rotateZ(4deg);
+  -ms-transform: rotateZ(4deg);
+  -webkit-transform: rotateZ(4deg);
+  -moz-transform: rotateZ(4deg);
+  -o-transform: rotateZ(4deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+#szabi-portfolio #work .suc-images img:not(:first-child) {
+  position: absolute;
+}
+
 @media screen and (min-width: 768px) {
   #szabi-portfolio #work {
     display: -webkit-box;
