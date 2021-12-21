@@ -1,1 +1,6 @@
 [0610/075803.312:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
+[1220/190849.052:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1220/192559.885:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1220/203154.646:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1220/205216.527:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1221/005626.344:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
