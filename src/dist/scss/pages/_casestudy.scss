@@ -1,14 +1,15 @@
 #suc-casestudy {
-    // background-image: url('');
     background-size: contain;
 
     h2 {
-        font-size: 32px;
+        font-size: 36px;
+        padding-bottom: 1rem;
+        // color: #000 !important;
     }
 
     p {
         font-size: 18px;
-        color: var(--clr-gray-1);
+        color: var(--clr-clearly-white);
     }
 
     .row {
@@ -20,9 +21,28 @@
     }
 }
 
+.case-study {
+    .row {
+        margin-bottom: 8rem;
+
+        p {
+            color: var(--clr-gray-4) !important;
+            line-height: 1.65;
+            font-size: 1rem !important;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            // color: #000 !important;
+            margin-top: 1.5rem;
+            margin-bottom: .5rem;
+        }
+    }
+}
+
 #cs-hero {
     height: 80vh;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--clr-primary-dark);
 
     .cs-hero-img {
         top: 0;
@@ -34,12 +54,13 @@
         background-repeat: no-repeat;
         background-image: url('/src/assets/images/suc/denmark-network.svg');
         background-repeat: no-repeat;
-        filter: opacity(0.05);
+        filter: opacity(0.1);
     }
 
     h1 {
         font-size: 2.75rem;
         font-weight: 900;
+        color: var(--clr-clearly-white) !important;
 
         @include mq(medium) {
             font-size: 4rem;
@@ -53,6 +74,7 @@
     p {
         font-size: 1.1rem;
         font-weight: 900;
+        color: var(--clr-clearly-white) !important;
     }
 }
 
@@ -225,6 +247,6 @@
     border-radius: 1rem;
 
     &:hover {
-        background-color: var(--clr-primary-dark);
+        background-color: var(--clr-primary);
     }
 }

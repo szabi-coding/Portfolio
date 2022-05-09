@@ -10,7 +10,8 @@ input[type="reset"] {
     font-family: $font-secondary;
     border: none;
     background: none;
-    font-size: 1.1rem;
+    // font-size: 1.125rem;
+    font-size: 1.25rem;
     overflow: hidden;
     white-space: nowrap;
     border-radius: 8px;
@@ -35,7 +36,8 @@ input[type="reset"] {
     background-color: var(--clr-accent);
     // background: #3a0ca3;
     color: var(--clr-clearly-white);
-    padding: 0.25rem 0.875rem;
+    // padding: 0.25rem 0.875rem;
+    padding: 0.5rem 1rem;
     width: fit-content;
     @include transition;
 

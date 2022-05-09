@@ -1,0 +1,70 @@
+.exp-card {
+    border: 2px solid var(--clr-gray-1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    position: relative;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    background-image: url("/src/assets/images/background.svg");
+
+    @include mq(medium) {
+        padding: 1.5rem;
+    }
+
+    #txt-btn {
+        display: none;
+    }
+
+    &__textbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 350px;
+
+        #name {
+            display: block;
+            font-size: 2rem;
+            padding-bottom: 0.5rem;
+        }
+
+        p:first-child {
+            font-size: 1rem !important;
+            color: var(--clr-gray-2) !important;
+        }
+
+        p:last-child {
+            font-size: .875rem !important;
+            color: var(--clr-gray-2) !important;
+        }
+
+        p:nth-child(2) {
+            // color: red;
+            padding: 1rem 0 1rem;
+
+            @include mq(medium) {
+                padding: 1rem 0 4rem;
+            }
+        }
+    }
+
+    &__img {
+        right: 1rem;
+        bottom: 0;
+
+        @include mq(medium) {
+            position: absolute;
+            max-width: 300px;
+        }
+
+        @include mq(large) {
+            max-width: 450px;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-1rem);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .38);
+    }
+}
