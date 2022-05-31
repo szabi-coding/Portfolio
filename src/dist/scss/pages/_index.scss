@@ -10,6 +10,59 @@ body {
     }
 }
 
+.somelinks {
+    @include mq(medium) {
+        display: none;
+    }
+
+    a {
+        color: var(--clr-gray-2);
+        font-size: 2rem;
+        margin-right: 1.5rem;
+
+        &:hover {
+            color: var(--clr-accent);
+        }
+    }
+}
+
+.side-nav {
+    position: fixed;
+    height: 25vh;
+    width: 5rem;
+    top: 29vh;
+    right: 2rem;
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    @include mq(large) {
+        display: flex;
+    }
+
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+
+        a {
+            width: 100%;
+            color: var(--clr-gray-2);
+            font-size: 4rem;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+
+            &:hover {
+                color: var(--clr-accent);
+            }
+        }
+    }
+}
+
 #szabi-portfolio {
     // background-image: url('');
     background-size: contain;
@@ -523,6 +576,11 @@ body {
             }
         }
 
+    }
+
+    .projects {
+        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
+        border: 2px solid var(--clr-gray-1);
     }
 
     #experience {

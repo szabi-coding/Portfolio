@@ -1782,6 +1782,76 @@ body p {
   color: #2F303A !important;
 }
 
+@media screen and (min-width: 768px) {
+  .somelinks {
+    display: none;
+  }
+}
+
+.somelinks a {
+  color: var(--clr-gray-2);
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+.somelinks a:hover {
+  color: var(--clr-accent);
+}
+
+.side-nav {
+  position: fixed;
+  height: 25vh;
+  width: 5rem;
+  top: 29vh;
+  right: 2rem;
+  z-index: 5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+@media screen and (min-width: 1140px) {
+  .side-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.side-nav__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+
+.side-nav__buttons a {
+  width: 100%;
+  color: var(--clr-gray-2);
+  font-size: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.side-nav__buttons a:hover {
+  color: var(--clr-accent);
+}
+
 #szabi-portfolio {
   background-size: contain;
   position: relative;
@@ -2245,6 +2315,10 @@ body p {
   font-size: 1.25em;
   top: -0.2em;
   margin-left: -1.75em;
+}
+
+#szabi-portfolio .projects {
+  border: 2px solid var(--clr-gray-1);
 }
 
 #szabi-portfolio #experience {
