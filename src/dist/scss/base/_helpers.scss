@@ -88,17 +88,17 @@
 }
 
 
-@for $i from 0 through 16 {
-    .p-#{$i*0.5} {
-        padding: #{$i*0.125}rem;
-    }
-}
+// @for $i from 0 through 16 {
+//     .p-#{$i*0.5} {
+//         padding: #{$i*0.125}rem;
+//     }
+// }
 
-@for $i from 0 through 16 {
-    .m-#{$i*0.5} {
-        margin: #{$i*0.125}rem;
-    }
-}
+// @for $i from 0 through 16 {
+//     .m-#{$i*0.5} {
+//         margin: #{$i*0.125}rem;
+//     }
+// }
 
 .mr-1 {
     margin-right: 0.25rem;
