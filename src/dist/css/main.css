@@ -515,6 +515,10 @@ input[type=reset] span {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
 }
 
+#streetware {
+  background-image: url("/src/assets/images/StreetWare/mobilebg.svg");
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -2035,6 +2039,17 @@ body p {
   background-image: url("/src/assets/images/suc/denmark-network.svg");
   background-repeat: no-repeat;
   filter: opacity(0.1);
+}
+#cs-hero .cs-hero-img-2 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: opacity(0.1);
+  background-image: url("/src/assets/images/StreetWare/StreetWare.png") !important;
 }
 #cs-hero h1 {
   font-size: 2.75rem;
