@@ -2,16 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Comic+Neue|Montserrat|Open+Sans|Oswald|Playfair+Display|Poppins|Raleway|Roboto&display=swap");
 @import url("https://use.typekit.net/miq0udh.css");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro&family=Yellowtail&display=swap");
-@-webkit-keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateX(-180px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 @keyframes reveal {
   from {
     opacity: 0;
@@ -22,31 +12,12 @@
     transform: translateX(0);
   }
 }
-@-webkit-keyframes line-anim {
-  0% {
-    stroke-dasharray: 0 50%;
-  }
-  100% {
-    stroke-dasharray: 50% 0;
-  }
-}
 @keyframes line-anim {
   0% {
     stroke-dasharray: 0 50%;
   }
   100% {
     stroke-dasharray: 50% 0;
-  }
-}
-@-webkit-keyframes a {
-  0% {
-    transform: translateX(-10px);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-  to {
-    transform: translateX(-10px);
   }
 }
 @keyframes a {
@@ -58,17 +29,6 @@
   }
   to {
     transform: translateX(-10px);
-  }
-}
-@-webkit-keyframes e {
-  0% {
-    transform: translateY(-5px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  to {
-    transform: translateY(-5px);
   }
 }
 @keyframes e {
@@ -188,7 +148,6 @@ textarea:focus {
 
 @media screen and (min-width: 1140px) {
   .sticky {
-    position: -webkit-sticky;
     position: sticky;
     top: 4rem;
   }
@@ -272,25 +231,25 @@ textarea:focus {
   --section-spacing: 4rem;
   --grid-gutter: 1.5rem;
   --sc-content-gap: 1.5rem;
-  --clr-primary: hsl(220deg, 50%, 19%);
-  --clr-primary-light: hsl(220deg, 50%, 23%);
-  --clr-primary-dark: hsl(220deg, 45%, 15%);
-  --clr-primary-dbg: hsl(220deg, 50%, 12%);
-  --clr-accent: hsl(334deg, 100%, 50%);
-  --clr-accent-light: hsl(334deg, 100%, 55%);
-  --clr-accent-dark: hsl(334deg, 100%, 45%);
-  --clr-bg-blue: hsl(231deg, 82%, 6%);
-  --clr-text: hsl(200deg, 50%, 20%);
-  --clr-clearly-white: hsl(0deg, 0%, 100%);
-  --clr-very-black: hsl(0deg, 0%, 0%);
-  --clr-gray0: hsl(0deg, 0%, 97%);
-  --clr-gray-1: hsl(212deg, 22%, 90%);
-  --clr-gray-2: hsl(213deg, 10%, 50%);
-  --clr-gray-3: hsl(206deg, 10%, 47%);
-  --clr-gray-4: hsl(208deg, 11%, 30%);
-  --clr-gray-5: hsl(220deg, 35%, 20%);
-  --clr-gray-6: hsl(220deg, 32%, 13%);
-  --clr-gray-7: hsl(200deg, 20%, 9%);
+  --clr-primary: hsl(220, 50%, 19%);
+  --clr-primary-light: hsl(220, 50%, 23%);
+  --clr-primary-dark: hsl(220, 45%, 15%);
+  --clr-primary-dbg: hsl(220, 50%, 12%);
+  --clr-accent: hsl(334, 100%, 50%);
+  --clr-accent-light: hsl(334, 100%, 55%);
+  --clr-accent-dark: hsl(334, 100%, 45%);
+  --clr-bg-blue: hsl(231, 82%, 6%);
+  --clr-text: hsl(200, 50%, 20%);
+  --clr-clearly-white: hsl(0, 0%, 100%);
+  --clr-very-black: hsl(0, 0%, 0%);
+  --clr-gray0: hsl(0, 0%, 97%);
+  --clr-gray-1: hsl(212, 22%, 90%);
+  --clr-gray-2: hsl(213, 10%, 50%);
+  --clr-gray-3: hsl(206, 10%, 47%);
+  --clr-gray-4: hsl(208, 11%, 30%);
+  --clr-gray-5: hsl(220, 35%, 20%);
+  --clr-gray-6: hsl(220, 32%, 13%);
+  --clr-gray-7: hsl(200, 20%, 9%);
 }
 @media screen and (min-width: 768px) {
   :root {
@@ -441,7 +400,6 @@ input[type=reset] span {
   background-color: var(--clr-accent);
   color: var(--clr-clearly-white);
   padding: 0.5rem 1rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
@@ -599,10 +557,6 @@ input[type=reset] span {
   transform: translateY(-106%) scale(0.75);
   text-align: left;
 }
-.form-container .text-field__input:not(:-ms-input-placeholder).text-field__input:not(:focus) + .text-field__label {
-  transform: translateY(-106%) scale(0.75);
-  text-align: left;
-}
 .form-container .text-field__input:not(:placeholder-shown).text-field__input:not(:focus) + .text-field__label {
   transform: translateY(-106%) scale(0.75);
   text-align: left;
@@ -707,7 +661,6 @@ input[type=reset] span {
   margin-bottom: 1rem;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   color: #c7cad1;
   /* On mouse-over, add a grey background color */
@@ -866,8 +819,7 @@ a {
 
 a.link {
   text-decoration: underline;
-  -webkit-text-decoration-color: var(--clr-accent) !important;
-          text-decoration-color: var(--clr-accent) !important;
+  text-decoration-color: var(--clr-accent) !important;
 }
 a.link:hover {
   color: var(--clr-accent);
@@ -987,7 +939,6 @@ a.link:hover {
 @media screen and (min-width: 768px) {
   .main-nav .nav-button-list .nav-button {
     height: 100%;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -1015,7 +966,6 @@ a.link:hover {
   .main-nav .nav-button-list .nav-button__link {
     height: 100%;
     font-size: 1.125rem;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -1098,7 +1048,6 @@ a.link:hover {
   font-weight: 700;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 @media screen and (min-width: 768px) {
@@ -1398,8 +1347,7 @@ body p {
   }
 }
 #szabi-portfolio .squares {
-  -webkit-animation: a 1s infinite;
-          animation: a 1s infinite;
+  animation: a 1s infinite;
   background: #ba54f5;
   position: absolute;
   background: linear-gradient(0deg, var(--clr-accent), #ba54f5);
@@ -1408,13 +1356,11 @@ body p {
   border-radius: 20%;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   pointer-events: none;
 }
 #szabi-portfolio .squares.square1 {
-  -webkit-animation: a 4s infinite;
-          animation: a 4s infinite;
+  animation: a 4s infinite;
   height: 300px;
   width: 300px;
   opacity: 0.5;
@@ -1435,8 +1381,7 @@ body p {
 }
 #szabi-portfolio .squares.square2 {
   display: none;
-  -webkit-animation: a 6s infinite;
-          animation: a 6s infinite;
+  animation: a 6s infinite;
   height: 400px;
   width: 400px;
   opacity: 0.4;
@@ -1449,8 +1394,7 @@ body p {
   }
 }
 #szabi-portfolio .squares.square3 {
-  -webkit-animation: a 5s infinite;
-          animation: a 5s infinite;
+  animation: a 5s infinite;
   height: 200px;
   width: 200px;
   opacity: 0.2;
@@ -1464,8 +1408,7 @@ body p {
   }
 }
 #szabi-portfolio .squares.square4 {
-  -webkit-animation: a 10s infinite;
-          animation: a 10s infinite;
+  animation: a 10s infinite;
   height: 100px;
   width: 100px;
   opacity: 0.9;
@@ -1480,8 +1423,7 @@ body p {
 }
 #szabi-portfolio .squares.square5 {
   display: none;
-  -webkit-animation: a 6s infinite;
-          animation: a 6s infinite;
+  animation: a 6s infinite;
   height: 250px;
   width: 250px;
   opacity: 0.05;
@@ -1496,8 +1438,7 @@ body p {
 }
 #szabi-portfolio .squares.square6 {
   display: none;
-  -webkit-animation: a 3s infinite;
-          animation: a 3s infinite;
+  animation: a 3s infinite;
   width: 300px;
   height: 300px;
   right: -5%;
@@ -1644,50 +1585,42 @@ body p {
 #szabi-portfolio #about #design-logo path:nth-of-type(1) {
   stroke-dasharray: 494.232635498;
   stroke-dashoffset: 494.232635498;
-  -webkit-animation: line-anim 5s ease forwards;
-          animation: line-anim 5s ease forwards;
+  animation: line-anim 5s ease forwards;
 }
 #szabi-portfolio #about #design-logo path:nth-of-type(2) {
   stroke-dasharray: 493.9271240234;
   stroke-dashoffset: 493.9271240234;
-  -webkit-animation: line-anim 5s ease forwards;
-          animation: line-anim 5s ease forwards;
+  animation: line-anim 5s ease forwards;
 }
 #szabi-portfolio #about #design-logo path:nth-of-type(3) {
   stroke-dasharray: 542.6758422852;
   stroke-dashoffset: 542.6758422852;
-  -webkit-animation: line-anim 5s ease forwards;
-          animation: line-anim 5s ease forwards;
+  animation: line-anim 5s ease forwards;
 }
 #szabi-portfolio #about #design-logo path:nth-of-type(4) {
   stroke-dasharray: 525.2319946289;
   stroke-dashoffset: 525.2319946289;
-  -webkit-animation: line-anim 5s ease forwards;
-          animation: line-anim 5s ease forwards;
+  animation: line-anim 5s ease forwards;
 }
 #szabi-portfolio #about #design-logo path:nth-of-type(5) {
   stroke-dasharray: 533.4022216797;
   stroke-dashoffset: 533.4022216797;
-  -webkit-animation: line-anim 5s ease forwards;
-          animation: line-anim 5s ease forwards;
+  animation: line-anim 5s ease forwards;
 }
 #szabi-portfolio #about #design-logo path:nth-of-type(6) {
   stroke-dasharray: 226.9440002441;
   stroke-dashoffset: 226.9440002441;
-  -webkit-animation: line-anim 5s ease forwards;
-          animation: line-anim 5s ease forwards;
+  animation: line-anim 5s ease forwards;
 }
 #szabi-portfolio #about #design-logo path:nth-of-type(7) {
   stroke-dasharray: 635.7132568359;
   stroke-dashoffset: 635.7132568359;
-  -webkit-animation: line-anim 5s ease forwards;
-          animation: line-anim 5s ease forwards;
+  animation: line-anim 5s ease forwards;
 }
 #szabi-portfolio #about #design-logo path:nth-of-type(8) {
   stroke-dasharray: 604.4829101563;
   stroke-dashoffset: 604.4829101563;
-  -webkit-animation: line-anim 5s ease forwards;
-          animation: line-anim 5s ease forwards;
+  animation: line-anim 5s ease forwards;
 }
 #szabi-portfolio #about-2 h2 {
   font-size: 38px;
@@ -1792,14 +1725,12 @@ body p {
   width: 40px;
   position: absolute;
   transition: 0.5s ease-out;
-  -webkit-animation: e 5s infinite;
-          animation: e 5s infinite;
+  animation: e 5s infinite;
   border-radius: 0;
   opacity: 0.8;
 }
 #szabi-portfolio #experience .tech__img:nth-child(1) {
-  -webkit-animation: e 5s infinite;
-          animation: e 5s infinite;
+  animation: e 5s infinite;
   width: 35px;
   right: 20%;
   top: 5%;
@@ -1811,8 +1742,7 @@ body p {
   }
 }
 #szabi-portfolio #experience .tech__img:nth-child(2) {
-  -webkit-animation: e 10s infinite;
-          animation: e 10s infinite;
+  animation: e 10s infinite;
   width: 40px;
   bottom: 0%;
   left: 19%;
@@ -1825,15 +1755,13 @@ body p {
   }
 }
 #szabi-portfolio #experience .tech__img:nth-child(3) {
-  -webkit-animation: e 7s infinite;
-          animation: e 7s infinite;
+  animation: e 7s infinite;
   width: 72px;
   left: 27%;
   top: 0%;
 }
 #szabi-portfolio #experience .tech__img:nth-child(4) {
-  -webkit-animation: e 8s infinite;
-          animation: e 8s infinite;
+  animation: e 8s infinite;
   width: 45px;
   right: 7%;
   top: 48%;
@@ -1845,8 +1773,7 @@ body p {
   }
 }
 #szabi-portfolio #experience .tech__img:nth-child(5) {
-  -webkit-animation: e 8s infinite;
-          animation: e 8s infinite;
+  animation: e 8s infinite;
   width: 90px;
   bottom: 45%;
   left: -2%;
@@ -1857,8 +1784,7 @@ body p {
   }
 }
 #szabi-portfolio #experience .tech__img:nth-child(6) {
-  -webkit-animation: e 9s infinite;
-          animation: e 9s infinite;
+  animation: e 9s infinite;
   width: 45px;
   bottom: -5%;
   left: 65%;
@@ -1909,8 +1835,7 @@ body p {
 }
 #szabi-portfolio #contact .mymail {
   text-decoration: underline;
-  -webkit-text-decoration-color: var(--clr-accent);
-          text-decoration-color: var(--clr-accent);
+  text-decoration-color: var(--clr-accent);
 }
 #szabi-portfolio #contact .contact-mail {
   display: none;
@@ -2051,6 +1976,17 @@ body p {
   filter: opacity(0.1);
   background-image: url("/src/assets/images/StreetWare/StreetWare.png") !important;
 }
+#cs-hero .cs-hero-img-3 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: opacity(0.1);
+  background-image: url("/src/assets/images/Kolibri/KolibriCover.png") !important;
+}
 #cs-hero h1 {
   font-size: 2.75rem;
   font-weight: 900;
@@ -2088,7 +2024,6 @@ body p {
   opacity: 0.2;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   pointer-events: none;
 }
@@ -2174,13 +2109,11 @@ body p {
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 #cs-branding .alphabet {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 #cs-branding .alphabet h3,

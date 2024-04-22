@@ -103,6 +103,19 @@
         background-image: url('/src/assets/images/StreetWare/StreetWare.png') !important;
     }
 
+    .cs-hero-img-3 {
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        // background-repeat: no-repeat;
+        filter: opacity(0.1);
+        // background-image: url('/src/assets/images/StreetWare/13\ Pro\ -\ 1.png') !important;
+        background-image: url('/src/assets/images/Kolibri/KolibriCover.png') !important;
+    }
 
 
     h1 {

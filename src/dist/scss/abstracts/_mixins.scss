@@ -5,7 +5,7 @@
     $sizePx in $breakpoints {
 
         @if $size==$device {
-            @media screen and(min-width: $sizePx) {
+            @media screen and (min-width: $sizePx) {
                 @content;
             }
         }
