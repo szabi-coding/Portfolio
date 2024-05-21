@@ -1987,6 +1987,17 @@ body p {
   filter: opacity(0.1);
   background-image: url("/src/assets/images/Kolibri/KolibriCover.png") !important;
 }
+#cs-hero .cs-hero-img-3 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: opacity(0.1);
+  background-image: url("/src/assets/images/MovementNight/mvmnt.png") !important;
+}
 #cs-hero h1 {
   font-size: 2.75rem;
   font-weight: 900;
